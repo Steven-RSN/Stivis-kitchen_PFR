@@ -1,0 +1,439 @@
+@font-face {
+    font-family: 'Inria-Serif';
+    src: url('fonts/Inria_Serif/InriaSerif-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inria-Serif-Bold';
+    src: url('fonts/Inria_Serif/InriaSerif-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inria-Serif-Light';
+    src: url('fonts/Inria_Serif/InriaSerif-Light.ttf') format('truetype');
+}
+body{
+    height: 100%;
+    margin: 0px;
+    font-family: Inria-Serif-Light;
+    
+}
+
+header{
+    
+    height: 8vh;
+    background-color: #323232;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* aligne verticalement*/
+    padding: 0 1rem;
+    min-height: 100px;
+    
+   
+}
+
+#iconMenuB{
+    width: 45px;
+    z-index:2;
+    align-self: center;
+    cursor: pointer;
+ 
+}
+#iconMenuBg{
+    z-index: 2;
+
+}
+
+#iconMenuB:hover{
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+header div{
+    padding: 5px;
+    border-radius: 40px;
+    border: 3px solid #CDCBBB;
+    margin-right: 20px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+}
+header .divIconUtilisateur:hover{
+    transform: rotate(360deg);
+    transition: 1.5s;
+
+}
+
+.menuBurger{
+    top: 0;
+    border-radius: 0;
+    border: 0;
+    background-color: #323232;
+    height: 100%;
+    width: 400px;
+    position:fixed;
+    z-index: 1;
+    left: -450px;
+    transition: left 0.3s ease;
+}
+.ulMenuBurger{
+    display: felx;
+    flex-direction: column;
+    position: relative;
+    margin-top: -120%;
+    margin-left: -50%;
+    justify-items: flex-start;
+    color: aliceblue;
+    
+}
+.ulMenuBurger li{
+    margin-top:50%;
+    letter-spacing: 0.3em;
+    
+}
+.ulMenuBurger li a{
+    color: aliceblue;
+}
+.menuLabel:checked + .menuBurger {
+    left: 0; 
+    
+}
+#iconUtilisateur{
+    width: 90%;  
+}
+
+#Stivisk{
+    border-color: rgb(255, 253, 253);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+ 
+}
+
+
+
+.filtrer{
+    align-self: center;
+    justify-self: center;
+    width: 200px;
+    margin-top: 40px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+#barreRecherche{
+    padding-left: 20px;
+    width: 50%;
+    max-width: 520px;
+    height: 42px;
+    border-radius: 22px;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+    border: none;
+    box-shadow: 0px 2px 8px rgb(163, 161, 161);
+}
+
+#btnRecherche{
+    margin: 24px;
+    border-radius: 150px;
+    height: 44px;
+    width: 44px;
+    position: absolute;
+    left: 62.6%;
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+}
+.catNouveau{
+   
+    margin-top: 4.5%;
+  
+    h1{
+        align-self: center;
+        text-decoration: underline;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 20%;
+
+    }
+    
+    
+}
+.catPopulaire{
+   
+    text-align: center;
+   
+}
+
+.fondGris{
+  
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    background-color: lightgrey;
+    justify-content: center;
+    align-items: center;
+    h1{
+        font-weight: 100; 
+        letter-spacing: 3px;
+        font-size: 240%;
+    }
+   
+}
+
+
+.itemPopulaire{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    padding-right: 5%;
+    padding-left: 5%;
+    border: 1px dashed black ;  
+
+}
+
+.t,.vigniette_recette{
+    height: 300px;
+    width: 300px;
+    min-width: 200px;
+    margin: 8% 8% 8% 8%;
+    border: 1px dotted black;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    
+}
+.t:hover,.vigniette_recette:hover{
+    transform: scale(1.4);
+    transition: 1s;
+}
+
+.titreRecette{
+    position: relative;
+    bottom: 110px;
+    margin-left: 10px;
+    font-size: 25px;
+    text-decoration: underline;
+    color: white;
+    font-weight: 100;
+    letter-spacing: 1px;
+
+}
+
+.etoils{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.iconEtoile{
+    height: 30px;
+}
+.note{
+    display: inline;
+    font-size: 25px;
+    align-self: center;
+    margin-top: 18px;
+    margin-left: 10px;
+}
+
+.img_recette{
+    border: 1px solid black;
+    background-image: url('Image/burger_img_defaut.jpg');
+    background-size: cover ;
+    background-position: center;
+    width: 280px;
+    height: 280px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.35), inset 0px -30px 30px rgba(0, 0, 0, 0.8) ;
+}
+
+.temp{
+    display: flex;
+    flex-direction: row;
+}
+
+.img-utilisateur{
+    background-image: url('Image/alain_ducasse_img_defaut.webp');
+    background-size: cover;
+    background-position: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    justify-self:  left;
+    margin-left: 10px;
+    margin-top: 15px;
+
+}
+
+.nomUtilisateur{
+    letter-spacing: 1px;
+    color: white;
+    margin-left: 6px;
+}
+
+
+/* page connexion */
+#connexionBody,#inscriptionBody{
+    font-family: Inria-Serif-light;
+    font-size: x-large;
+    color: #3C3A3A;
+}
+
+.mainCenterConnexion{
+    justify-items: center;
+
+
+}
+
+.connexionMain{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+}
+
+hr{
+    margin-top: 1% ;
+    margin-bottom: 0;
+    width: 46%;
+    max-width: 850px;
+
+    
+}
+
+.petitHr{
+    width: 16%;
+    margin-top: 0.5%;
+
+}
+
+.fondGrisConnexion{
+    font-family: Inria-Serif-Bold;
+    font-size: xx-large;
+    letter-spacing: 3px;
+    margin-top: 30px;
+    width: 100vw;
+    display: flex;
+    height: 100px;
+    background-color: lightgrey;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+form{
+    font-family: Inria-Serif;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center; 
+    margin-top: 30px;
+    justify-self: center;
+
+}
+
+form input{
+    margin-top: 6px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    height: 50px;
+    width: 200%;
+}
+
+form input[type=submit]{
+    font-family: Inria-Serif-light;
+    font-size: x-large;
+    width: 120%;
+    margin:30px 0px ;
+    height: 50px;
+    border: 0;
+    background-color: #CDCBBB;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.45);
+
+
+}
+form input[type=submit]:hover, form button:hover {
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+
+form label{
+    margin-top: 40px;
+    
+}
+
+.Inscrire{
+    font-family: Inria-Serif-light;
+    font-size: x-large;
+    border-radius: 10px;
+    height: 50px;
+    width: 100%;
+    border: 0;
+    background-color: #CDCBBB;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.45);
+}
+
+a{
+    text-decoration: none;
+    color: #3C3A3A;
+}
+
+.faceInstaGoogle {
+    margin-top: 3.2%;
+    display: flex;
+    flex-direction: column;
+
+    button{
+        display: grid;
+        grid-template-columns: 6fr 1fr;
+        align-items: center;
+        align-content: center;
+        text-align: start;
+        padding:0% 10%;
+        align-self:center;
+        font-family: Inria-Serif-light;
+        font-size: x-large;
+        border-radius: 10px;
+        height: 90px;
+        width: 140%;
+        margin: 20px 0px;
+        border: 0;
+        background-color: white;
+        box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.24);
+        border-radius: 15px;
+    }
+    button:hover{
+        transform: scale(1.1);
+        transition: 0.8s;
+    }
+    img{     
+        height: 58%;
+      
+    }
+}
+.fondGrisFooter{
+    background-color: lightgray;
+    width: 100%;
+    height: 30px;
+   
+}
+footer{
+
+    background-color: #323232;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+
+}
