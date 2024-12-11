@@ -318,7 +318,7 @@ hr{
 
 }
 
-.fondGrisConnexion{
+.fondGrisConnexion,.fondGrisInscripi{
     font-family: Inria-Serif-Bold;
     font-size: xx-large;
     letter-spacing: 3px;
@@ -436,4 +436,17 @@ footer{
     width: 100%;
     height: 100px;
 
+}
+.formInscription{
+    margin-top: 0px;
+
+}
+#identifiant[type=text],#motDePasse[type=password]{
+    width: 100%;   
+    padding-left: 4%;
+    
+}
+#identifiant[type=email]{
+    width: 140%;
+    padding-left: 4%;
 }
