@@ -1,0 +1,213 @@
+@font-face {
+    font-family: 'Inria-Serif';
+    src: url('fonts/Inria_Serif/InriaSerif-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inria-Serif-Bold';
+    src: url('fonts/Inria_Serif/InriaSerif-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inria-Serif-Light';
+    src: url('fonts/Inria_Serif/InriaSerif-Light.ttf') format('truetype');
+}
+
+body{
+    height: 100%;
+    margin: 0px;
+    font-family: Inria-Serif-Light;
+    
+}
+
+header{
+    
+    height: 8vh;
+    background-color: #323232;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; /* aligne verticalement*/
+    padding: 0 1rem;
+    min-height: 100px;
+    
+   
+}
+
+#iconMenuB{
+    width: 45px;
+    z-index:2;
+    align-self: center;
+    cursor: pointer;
+ 
+}
+#iconMenuBg{
+    z-index: 2;
+
+}
+
+#iconMenuB:hover{
+    transform: scale(1.1);
+    transition: 0.8s;
+}
+header div{
+    padding: 5px;
+    border-radius: 40px;
+    border: 3px solid #CDCBBB;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+}
+header .divIconUtilisateur:hover{
+    transform: rotate(360deg);
+    transition: 1.5s;
+
+}
+
+.menuBurger{
+    top: 0;
+    border-radius: 0;
+    border: 0;
+    background-color: #323232;
+    height: 100%;
+    width: 400px;
+    position:fixed;
+    z-index: 1;
+    left: -450px;
+    transition: left 0.3s ease;
+}
+.ulMenuBurger{
+    display: felx;
+    flex-direction: column;
+    position: relative;
+    margin-top: -120%;
+    margin-left: -50%;
+    justify-items: flex-start;
+    color: aliceblue;
+    
+}
+.ulMenuBurger li{
+    margin-top:50%;
+    letter-spacing: 0.3em;
+    
+}
+.ulMenuBurger li a{
+    color: aliceblue;
+}
+.menuLabel:checked + .menuBurger {
+    left: 0; 
+    
+}
+#iconUtilisateur{
+    width: 90%;  
+}
+
+#Stivisk{
+    border-color: rgb(255, 253, 253);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 35%;
+    max-width: 145px;
+    
+}
+
+/* Container Styles */
+.contact-container {
+    text-align: center;
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.contact-container h1 {
+    font-size: 2rem;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+.contact-container p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Form Styles */
+.form-container {
+    border: 2px solid #0078FF;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 20px;
+    max-width: 400px; /* Limite la largeur pour un design centré et compact */
+    margin: 0 auto; /* Centre le formulaire horizontalement */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centre les éléments horizontalement */
+}
+
+form label {
+    display: block;
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #444;
+}
+
+form textarea {
+    height: 100px;
+    resize: none;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Button Styles */
+form button {
+    background-color: #d4d4d4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #b3b3b3;
+}
+
+.fondGrisFooter{
+    background-color: lightgray;
+    width: 100%;
+    height: 30px;
+   
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    margin-top: 10%;
+    background-color: #323232;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+
+}

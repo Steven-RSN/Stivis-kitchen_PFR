@@ -1,46 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Connectez-vous pour ajouter et partager vos recettes préférées avec vos proches. Rejoignez notre communauté culinaire dès maintenant !">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body id="connexionBody">
+
     <header>
-        <img id="iconMenuB" src="Image/icons/icons8-menu-192.png" alt="">
-        <img id="Stivisk" src="Image/icons/iconMarque.png" alt="">
+        <img id="iconMenuB" src="Image/icons/icons8-menu-192.png" alt="menu">
+        <img id="Stivisk" src="Image/icons/iconMarque.png" alt="logo de la marque">
+
         <div>
             <a href="connexion.html">
-                <img id="iconUtilisateur" src="Image/icons/icons8-cuisinier-homme-100 (1).png" alt="">
+                <img id="iconUtilisateur" src="Image/icons/icons8-cuisinier-homme-100 (1).png" alt="icone connetion">
             </a>
         </div>
+
     </header>
+
     <div class="fondGrisConnexion">
         <h1>Connectez vous</h1>
     </div>
+
     <main class="mainCenterConnexion">
+
         <div>
-           
             <hr>
             <p>Pour ajouter vos recettes et les partager avec vos proches !</p>
             <hr class="petitHr">
         </div>
 
-        <form action="">
-            <label for=""><!--Identifiant:--></label>
-            <input type="email" class="tempIn" id="identifiantConnexion"placeholder="E-mail ou pseudo">
+        <form action="" class="formConnection" method="POST">
+            <label for="identifiantConnexion" class="labelConnec"><!--Identifiant:--></label>
+            <input type="email" class="inputConnec" id="identifiantConnexion"placeholder="E-mail ou pseudo">
 
-            <label for=""><!--Mot de passe:--></label>
-            <input type="password" id="motDePasseConnexion" placeholder="Mot de passe" >
+            <label for="motDePasseConnexion" class="labelConnec"><!--Mot de passe:--></label>
+            <input type="password" class="inputConnec" id="motDePasseConnexion" placeholder="Mot de passe" >
+
             <input type="submit" value="Se connecter">
             <button class="Inscrire"><a href="inscription.html">S'inscrire</a></button>
         </form>
 
         <div class="faceInstaGoogle">
-            <button id="googleSingIn">Se connecter avec Google <img src="Image/icons/ReseauxSo/icons8-logo-google-100 (1).png" alt=""></button>
-            <button id="facebookSingIN">Se connecter avec Facebook <img src="Image/icons/ReseauxSo/icons8-facebook-nouveau-100.png" alt=""></button>
-            <button id="instagramSingIN">Se connecter avec Instagram <img src="Image/icons/ReseauxSo/icons8-instagram-100.png" alt=""></button>
+            <button id="googleSingIn">Se connecter avec Google <img src="Image/icons/ReseauxSo/icons8-logo-google-100 (1).png" alt="Logo Google"></button>
+            <button id="facebookSingIN">Se connecter avec Facebook <img src="Image/icons/ReseauxSo/icons8-facebook-nouveau-100.png" alt="Logo Facebook"></button>
+            <button id="instagramSingIN">Se connecter avec Instagram <img src="Image/icons/ReseauxSo/icons8-instagram-100.png" alt="Logo Instagram"></button>
         </div>
 
     </main>
