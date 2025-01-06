@@ -4,22 +4,236 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recettes - Alain Ducasse</title>
-    <link rel="stylesheet" href="styleUtilisateur.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="profile-header">
-        <h1>Alain Ducasse</h1>
-        <div class="profile-info">
-            <div class="profile-picture"></div>
-            <div class="profile-text">
-                <h2>Alain Ducasse</h2>
-                <p>Recette ajoutée : 15</p>
-                <p>Meilleur recette : Maki</p>
+    <header>
+        <!-- <img id="iconMenuB" src="Image/icons/icons8-menu-192.png" alt=""> -->
+        <label for="menuLabel" id="iconMenuBg">
+            <img src="Image/icons/icons8-menu-192.png" id="iconMenuB" alt="Menu">
+        </label>
+        <input type="checkbox" id="menuLabel" class="menuLabel">
+
+        <div class="menuBurger">
+            <ul class="ulMenuBurger">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="">Mes favoris</a></li>
+                <li> <a href="">Ajouter une recette</a></li>
+                <li><a href="">Mon compte</a></li>
+                <li><a href="">Contact</a></li>
+           
+                
+            </ul>
+        </div>
+
+        <img id="Stivisk" src="Image/icons/iconMarque.png" alt="">
+        <div class="divIconUtilisateur">
+            <a href="connexion.html">
+                <img id="iconUtilisateur" src="Image/icons/icons8-cuisinier-homme-100 (1).png" alt="">
+            </a>
+        </div>
+    </header>
+   
+        <div class="fondGrisConnexion">
+            <h1>Alain Ducasse</h1>
+            
+        </div>
+     
+
+    
+     
+    <div class="carteProfile">
+        <div class="gris">
+            <h2>Alain Ducasse</h2>
+        </div>
+        <div class="contenuUtilisateur">
+            <div class="imgUtilisateur"></div>
+            <div class="infoUtilisateur">
+                <p>Recettes ajoutées : 15</p>
+                <p>Meilleure recette : Maki</p>
                 <button>Suivre</button>
             </div>
         </div>
-    </header>
+        <div class="basCarte"></div> <!-- Ajout d'une section pour la bande colorée -->
+    </div>
 
+    
+    <main class="marge">
+        <div class="center">
+            <form class="formRechercheFiltrerUtilisateur" id="searchFrom" action="search.html" method="post">
+                <div>
+                    <input id="barreRechercheUtilisateur" type="text" name="recherche"placeholder="Rechercher..." >
+                </div>       
+            </form>
+            
+            <fieldset class="filtrerUtilisateur">
+                <label for="checkUtilisateur">Filtrer</label>
+                <input type="checkbox" name="checkUtilisateur" id="checkUtilisateur" >
+            </fieldset>
+           
+        </div>
+   
+        <div class="connexionMain">
+            <div class="fondGrisRecetteU">
+                <h1>Recettes</h1>
+            <hr class="hrUtilisateur">
+
+            </div>
+        </div>
+    
+        <div class="itemPopulaire">
+    
+            <div class="vigniette_recette" >
+                <div class="img_recette">
+                    <h6 class="titreRecette">Burger</h6>
+                    <div class="temp">
+                        <div class="img-utilisateur"></div>
+                        <p class="nomUtilisateur">Alain Ducasse</p>
+                    </div>
+                </div>
+                <div class="etoils">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <p class="note">5/5</p>
+    
+                </div>
+            </div>
+    
+            <div class="vigniette_recette" >
+                <div class="img_recette">
+                    <h6 class="titreRecette">Burger</h6>
+                    <div class="temp">
+                        <div class="img-utilisateur"></div>
+                        <p class="nomUtilisateur">Alain Ducasse</p>
+                    </div>
+                </div>
+                <div class="etoils">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <p class="note">5/5</p>
+    
+                </div>
+            </div>
+            <div class="vigniette_recette" >
+                <div class="img_recette">
+                    <h6 class="titreRecette">Burger</h6>
+                    <div class="temp">
+                        <div class="img-utilisateur"></div>
+                        <p class="nomUtilisateur">Alain Ducasse</p>
+                    </div>
+                </div>
+                <div class="etoils">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <p class="note">5/5</p>
+    
+                </div>
+            </div>
+          
+            <div class="vigniette_recette" >
+                <div class="img_recette">
+                    <h6 class="titreRecette">Burger</h6>
+                    <div class="temp">
+                        <div class="img-utilisateur"></div>
+                        <p class="nomUtilisateur">Alain Ducasse</p>
+                    </div>
+                </div>
+                <div class="etoils">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <p class="note">5/5</p>
+    
+                </div>
+            </div>
+            <div class="vigniette_recette" >
+                <div class="img_recette">
+                    <h6 class="titreRecette">Burger</h6>
+                    <div class="temp">
+                        <div class="img-utilisateur"></div>
+                        <p class="nomUtilisateur">Alain Ducasse</p>
+                    </div>
+                </div>
+                <div class="etoils">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <p class="note">5/5</p>
+    
+                </div>
+            </div>
+            <div class="vigniette_recette" >
+                <div class="img_recette">
+                    <h6 class="titreRecette">Burger</h6>
+                    <div class="temp">
+                        <div class="img-utilisateur"></div>
+                        <p class="nomUtilisateur">Alain Ducasse</p>
+                    </div>
+                </div>
+                <div class="etoils">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <p class="note">5/5</p>
+    
+                </div>
+            </div>
+            <div class="vigniette_recette" >
+                <div class="img_recette">
+                    <h6 class="titreRecette">Burger</h6>
+                    <div class="temp">
+                        <div class="img-utilisateur"></div>
+                        <p class="nomUtilisateur">Alain Ducasse</p>
+                    </div>
+                </div>
+                <div class="etoils">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <p class="note">5/5</p>
+    
+                </div>
+            </div>
+            <div class="vigniette_recette" >
+                <div class="img_recette">
+                    <h6 class="titreRecette">Burger</h6>
+                    <div class="temp">
+                        <div class="img-utilisateur"></div>
+                        <p class="nomUtilisateur">Alain Ducasse</p>
+                    </div>
+                </div>
+                <div class="etoils">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <img class="iconEtoile" src="Image/icons/etoile/image.png" alt="">
+                    <p class="note">5/5</p>
+    
+                </div>
+            </div>
+        
+    
+        </div>
+    </main>
+<!--
     <section class="recipes-section">
         <h2>Recette</h2>
         <div class="search-bar">
@@ -30,7 +244,7 @@
         </div>
 
         <div class="recipes-grid">
-            <!-- Replace images with gray squares -->
+            Replace images with gray square
             <div class="recipe-card">
                 <div class="recipe-image"></div>
                 <div class="recipe-info">
@@ -68,5 +282,6 @@
             </div>
         </div>
     </section>
+ -->
 </body>
 </html>

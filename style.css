@@ -19,7 +19,6 @@ body{
 }
 
 header{
-    
     height: 8vh;
     background-color: #323232;
     border: 1px solid black;
@@ -118,35 +117,26 @@ header .divIconUtilisateur:hover{
 .filtrer{
     align-self: center;
     justify-self: center;
-    width: 200px;
-    margin-top: 40px;
+    width: 60%;
+    max-width:550px ;
     border: 1px solid gray;
     border-radius: 10px;
 }
 
 #barreRecherche{
+    display: flex;
     padding-left: 20px;
+    margin: 40px 0;
     width: 50%;
     max-width: 520px;
     height: 42px;
     border-radius: 22px;
-    position: absolute;
-    transform: translateX(-50%);
-    left: 50%;
+    justify-self: center;
+    align-self: center;
     border: none;
     box-shadow: 0px 2px 8px rgb(163, 161, 161);
 }
 
-#btnRecherche{
-    margin: 24px;
-    border-radius: 150px;
-    height: 44px;
-    width: 44px;
-    position: absolute;
-    left: 62.6%;
-    border: none;
-    background-color: rgba(240, 248, 255, 0);
-}
 .catNouveau{
    
     margin-top: 4.5%;
@@ -190,7 +180,7 @@ header .divIconUtilisateur:hover{
     justify-content: center;
     align-content: center;
     
-    border: 1px dashed black ;  
+    /* border: 1px dashed black ;   */
 
 }
 
@@ -199,7 +189,7 @@ header .divIconUtilisateur:hover{
     width: 300px;
     min-width: 200px;
     margin: 6% 4%;
-    border: 1px dotted black;
+    /* border: 1px dotted black; */
     border-radius: 8px;
     display: flex;
     flex-direction: column; 
@@ -864,8 +854,183 @@ footer{
 }
 
 
-   
+/*  ////////////// --- Page Utilisateur --- \\\\\\\\\\\\\\  */ 
 
+
+
+/* .carteProfile{
+    border: 1px solid black;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    width: 50em;
+
+    .gris{
+        background-color: #c0c0c0;
+        text-align: center;
+        grid-column: 1/3;
+        
+        h2{
+            font-family: 'Courier New';
+          
+        }
+    }
+}
+.infoUtilisateur{
+   border: 1PX solid green;
+}
+.imgUtilisateur{
+    background-image: url('Image/alain_ducasse_img_defaut.webp');
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    justify-self:  right;
+    position: relative;
+
+    
+} */
+ .marge{
+    margin:0 22em;
+ }
+.carteProfile {
+    margin: 70px;
+    justify-self: center;
+    position: relative;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 1em;  
+    width: 50em;
+    text-align: left;
+}
+
+.gris {
+
+    background-color: #c0c0c0;
+    padding: 1em;
+    text-align: center;
+    border-radius: 50px 50px 0 0;
+    position: relative; /* Nécessaire pour gérer l'image qui empiète */
+}
+
+.gris h2 {
+    margin: 5px;
+    padding-left: 65px;
+    font-family: Inria-Serif-light;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: 2em;
+    text-decoration: underline;
+    position: relative;
+
+}
+
+.contenuUtilisateur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    gap: 1em;
+}
+
+.imgUtilisateur {
+    background-image: url('Image/alain_ducasse_img_defaut.webp');
+    background-size: cover;
+    background-position: center;
+    height: 220px;
+    width: 220px;
+    margin-bottom: 40px;
+    border-radius: 50%;
+    position: absolute; 
+    left: 5.6em; /* Place l'image à gauche */
+    border: 5px solid white; 
+    z-index: 2; 
+}
+
+.infoUtilisateur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
+    margin-left: 70px;
+}
+
+.infoUtilisateur p {
+    margin: 0
+}
+
+button { 
+    font-family: Inria-Serif-light;
+    font-size: large;
+    border-radius: 10px;
+    height: 35px;
+    width: 120px;
+    border: 0;
+    background-color: #CDCBBB;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.45);
+    padding: 0.5em 1em;
+    margin-top: 10px;
+    cursor: pointer;
+    align-self: center;
+}
+
+button:hover {
+    background-color: #e0e0e0;
+}
+.fondGrisRecetteU{
+    background: linear-gradient(to right, white, #c0c0c0, white);
+    width:60em;
+    align-content: center;
+    justify-self: center;
+    height: 50px;
+    border-top: 1px solid #ababab;
+    h1{
+        margin: 5px;
+    }
+
+}
+.hrUtilisateur{
+    width: 60%;
+    margin-top: 5px;
+    max-width: 480px;
+    border-top: 1px solid #abababcd;
+
+
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+.filtrerUtilisateur{
+    margin: 40px 0;
+    width: 80%;
+    min-width: 300px;
+    max-width: 550px;
+    align-self: center;
+    justify-self: center;
+    border-radius: 10px;
+}
+
+#barreRechercheUtilisateur{
+    margin-top: 30px;
+    width: 600px;
+    padding-left: 20px;
+    max-width: 550px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 0px 2px 8px rgb(163, 161, 161);
+}
+.basCarte {
+    background-color: #CDCBBB; /* Couleur personnalisée pour le bas */
+    height: 25px; /* Hauteur de la bande */
+    width: 100%; /* Assure qu'elle prend toute la largeur de la carte */
+    position: relative; /* Inclus dans le flux de la carte */
+    border-radius:0 0 50px 50px;
+}
 
 @media screen and (max-width: 900px ){
     .presentationRecetteGris{
