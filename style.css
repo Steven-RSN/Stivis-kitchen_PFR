@@ -608,6 +608,27 @@ footer{
     align-self: flex-start;
   
 }
+.nombre{ 
+ border-top: 1px solid black ;
+ border-bottom: 2px solid black ;
+ padding: 3px 10px;
+}
+.decr{
+    border: 1px solid black;
+    height:30px; width:25px ;text-align:center ;
+    margin:0 0 0 5px ; 
+    padding:0 ;
+    border-radius: 8px 0 0 8px
+
+}
+.incr{
+    border: 1px solid black;
+    height:30px; width:25px ;
+    text-align:center ;
+    margin:0 8px 0 0 ;
+    padding:0;
+    border-radius: 0px 8px 8px 0px;
+}
 
 .articleRecetteGrisIngrédiant{
  
