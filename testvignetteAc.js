@@ -8,8 +8,8 @@ const vignetteRecette = document.getElementsByClassName('img_recette');
 
 const vignetteRecetteTb = Array.from(vignetteRecette);  //convertit en tableau
 
-let compteurTemp=0
-let memory=[]
+
+
 
 
 // Boucle pour afficher les titres et les images des recettes situées dans glossaire.js
@@ -95,7 +95,7 @@ if (recetteIndex !== null && !isNaN(recetteIndex)) {
 
 
 
-    // Même chose que pour la liste d'ingrédients mais pour les étapes
+    // Même chose que pour la liste d'ingrédients mais pour les étapes de la recette
     const ulEtape = document.querySelector('#etapeUl');
    
     const listeEtape = document.querySelectorAll('#etapeUl li')
@@ -129,74 +129,62 @@ if (recetteIndex !== null && !isNaN(recetteIndex)) {
 
 
 
-   // Produit en croix afin de permettre d'incrémenter ou de décrémenter les quantités des ingrédients en fonction du nombre de personnes sélectionné
-    const btnIncrDecr= document.querySelectorAll('.decr, .incr')
+   // Produit en croix afin de permettre d'incrémenter ou de décrémenter 
+   // les quantités des ingrédients en fonction du nombre de personnes sélectionné.
+   // Initialise les variables pour récuperer des éléments HTML : boutons et le nombre de personne
+   // Initialise la variable memory et newNbPersonne 
+   // Initialise les écoutes des boutons 
+   //
+    const btnIncrDecr= document.querySelectorAll('.decr, .incr');
+    const tableauBtn = Array.from(btnIncrDecr);
 
-
-    const tableauBtn = Array.from(btnIncrDecr)
-    let nbPersonne=recette.nbPersonne
-    let newNbPersonne=recette.nbPersonne
+    let memory=[];
+    let nbPersonne=recette.nbPersonne;
+    let newNbPersonne=recette.nbPersonne;
 
     tableauBtn.forEach(function(btn){
         btn.addEventListener('click',function(){
-
            
-            
-            // Incrémentation
-            if (btn.classList=='incr'){
-                console.log('click')
-                compteurTemp++
-                newNbPersonne=newNbPersonne+1
-                h4.innerText=`${newNbPersonne} `
-                console.log(compteurTemp, 'new', newNbPersonne)
+            // Condition pour identifier le bouton sur lequel on clique
+            if (btn.classList=='incr'){             // Incrémentation 
+                console.log('click: incr')
+          
+                newNbPersonne=newNbPersonne+1;
+                h4.innerText=`${newNbPersonne} `;
+
                 for(let i=0; i<recueil[recetteIndex].ingredients.length;i++){
 
-                    let quantité=recueil[recetteIndex].ingredients[i].quantité
+                    let quantité=recueil[recetteIndex].ingredients[i].quantité;
+                    let result=quantité*(newNbPersonne/nbPersonne);
+             
+                    memory.push(result);
 
-                    let result=quantité*(newNbPersonne/nbPersonne)
-                    
-
-                    console.log('result :',result)
-                    
-                    memory.push(result)
-                    console.log(memory)
                     listeIngredientTb[i].innerHTML=`${result||''} ${recette.ingredients[i].unité || ''} ${recette.ingredients[i].nom}`;
 
+                }
+ 
              
+            }else{                            // Décrémentation
 
+                newNbPersonne=newNbPersonne-1;
+
+                if(newNbPersonne===0){       // Permet de ne pas avoir moins d'une personne pour la recette
+                    newNbPersonne=1;
                 }
-               
-            // Décrémentation
-            }else{
-                newNbPersonne=newNbPersonne-1
-                if(newNbPersonne===0){
-                    newNbPersonne=1
-                }
-                h4.innerText=`${newNbPersonne} `
-                console.log(compteurTemp, 'new', newNbPersonne)
+                h4.innerText=`${newNbPersonne} `;
+
                 for(let i=0; i<recueil[recetteIndex].ingredients.length;i++){          
        
-
-                    let quantité=recueil[recetteIndex].ingredients[i].quantité
-
-                    let result=quantité*(newNbPersonne/nbPersonne)
+                    let quantité=recueil[recetteIndex].ingredients[i].quantité;
+                    let result=quantité*(newNbPersonne/nbPersonne);
                     
+                    memory.push(result);
 
-                    console.log('result :',result)
-                    
-                    memory.push(result)
-                    console.log(memory)
                     listeIngredientTb[i].innerHTML=`${result||''} ${recette.ingredients[i].unité || ''} ${recette.ingredients[i].nom}`;
                     
-                
                 }
-                
-                console.log('autre')
-
             }
-
-            memory=[]
-
+            memory=[]; //on vide le tableau memory
         })
     })
 
