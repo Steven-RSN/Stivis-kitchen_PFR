@@ -138,7 +138,7 @@ if (recetteIndex !== null && !isNaN(recetteIndex)) {
     const btnIncrDecr= document.querySelectorAll('.decr, .incr');
     const tableauBtn = Array.from(btnIncrDecr);
 
-    let memory=[];
+  //  let memory=[];
     let nbPersonne=recette.nbPersonne;
     let newNbPersonne=recette.nbPersonne;
 
@@ -157,7 +157,7 @@ if (recetteIndex !== null && !isNaN(recetteIndex)) {
                     let quantité=recueil[recetteIndex].ingredients[i].quantité;
                     let result=quantité*(newNbPersonne/nbPersonne);
              
-                    memory.push(result);
+                 //   memory.push(result);
 
                     listeIngredientTb[i].innerHTML=`${result||''} ${recette.ingredients[i].unité || ''} ${recette.ingredients[i].nom}`;
 
@@ -178,13 +178,13 @@ if (recetteIndex !== null && !isNaN(recetteIndex)) {
                     let quantité=recueil[recetteIndex].ingredients[i].quantité;
                     let result=quantité*(newNbPersonne/nbPersonne);
                     
-                    memory.push(result);
+                 //   memory.push(result);
 
                     listeIngredientTb[i].innerHTML=`${result||''} ${recette.ingredients[i].unité || ''} ${recette.ingredients[i].nom}`;
                     
                 }
             }
-            memory=[]; //on vide le tableau memory
+          //  memory=[]; //on vide le tableau memory
         })
     })
 

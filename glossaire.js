@@ -1,4 +1,3 @@
-
 let recueil =[
     {
 
@@ -16,7 +15,6 @@ let recueil =[
             { nom: "ail", quantité: 1, unité: "gousse" },
             { nom: "bouquet garni", quantité: 1, unité: null },
             { nom: "champignons de Paris", quantité: 250, unité: "g" } ,
-            
         ],
         nbPersonne:6,
         duree:'1h10',
@@ -29,15 +27,12 @@ let recueil =[
             `Ajouter l’ail et le bouquet garni.`,
             `Fermer la cocotte minute.`,
             `Laisser cuire doucement 60 min à partir de la mise en rotation de la soupape.`,
-
         ],
         statut:'public',
         note:'',
         //com:`${bddcom}`
-
     },
     {
-
         titre:'boulette de viande',
         img:'Image/img_recette/boulette_de_viande.png',
         ingredients: [
@@ -65,7 +60,6 @@ let recueil =[
         statut:'public',
         note:'',
         //com:`${bddcom}`
-
     },
     {
 
