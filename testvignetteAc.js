@@ -32,7 +32,7 @@ vignetteRecetteTb.forEach(function(recette,index) {
 
 
 
-const params = new URLSearchParams(window.location.search); // Récupère les paramètres de l'URL
+const params = new URLSearchParams(window.location.search); // Récupère les paramètres de l'URL = va chercher tout ce qu'il y a deriere le "?" dans l'url.
 const recetteIndex = params.get('recette'); // Récupère l'index de la recette
 
 // Si l'index existe et si c'est bien un nombre valide, affiche la page recette correspondante

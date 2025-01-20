@@ -12,16 +12,17 @@
 }
 
 body{
-    height: 100%;
     margin: 0px;
     font-family: Inria-Serif-Light;
     
 }
 
 header{
-    height: 8vh;
-    background-color: #323232;
-    border: 1px solid black;
+    position: fixed;
+    width: 100%;
+    height: 15px;
+    background-color: #101010;
+    z-index: 2;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,7 +32,9 @@ header{
     
    
 }
-
+.margin{
+    margin:0 16%;
+}
 #iconMenuB{
     width: 45px;
     z-index:2;
@@ -113,6 +116,13 @@ header .divIconUtilisateur:hover{
     max-width: 145px;
     
 }
+#imageFond{
+    width: 100%;
+    z-index: 1;
+    border-bottom: 4px solid rgba(15, 15, 15, 0.92);
+    margin-top: -30px;
+    transform: scaleY(-1);
+}
 
 .filtrer{ /* a modifier---------------------------------------*/
     display: flex;
@@ -179,15 +189,18 @@ header .divIconUtilisateur:hover{
 .fondGris{
   
     display: flex;
+    justify-self: center;
     flex-direction: column;
     height: 100px;
-    background-color: lightgrey;
+    width: 80em;
+    background: linear-gradient(to right, white, #444444, white);
     justify-content: center;
     align-items: center;
     h1{
-        font-weight: 100; 
+        font-weight: 800; 
         letter-spacing: 3px;
-        font-size: 240%;
+        font-size: 40px;
+        color: white;
     }
    
 }
@@ -197,15 +210,16 @@ header .divIconUtilisateur:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: center;
-    margin:0 10em;
-    /* border: 1px dashed black ;    */
-
+    align-content: center;   
+    padding: 10%;
+    margin: 8% 0% 15% 0%;
+    border-radius:20PX ;
+    background-color: #5656560f;
 }
 
 .vigniette_recette{ /*.t,*/
     height: 300px;
-    width: 300px;
+    width: 180px;
     min-width: 200px;
     margin: 4% 4%;
     /* border: 1px dotted black; */
