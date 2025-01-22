@@ -18,17 +18,16 @@ body{
 }
 
 header{
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
-    height: 15px;
     background-color: #101010;
-    z-index: 2;
+    z-index: 3;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center; /* aligne verticalement*/
     padding: 0 1rem;
-    min-height: 100px;
+    height: 100px;
     
    
 }
@@ -36,16 +35,16 @@ header{
     margin:0 16%;
 }
 #iconMenuB{
-    width: 45px;
+    width: 35px;
     z-index:2;
     align-self: center;
     cursor: pointer;
  
 }
-#iconMenuBg{
+/* #iconMenuBg{
     z-index: 2;
 
-}
+} */
 
 #iconMenuB:hover{
     transform: scale(1.1);
@@ -62,6 +61,9 @@ header div{
     text-align: center;
     align-items: center;
     
+}
+.divIconUtilisateur{
+    margin-right: 32px;
 }
 header .divIconUtilisateur:hover{
     transform: rotate(360deg);
@@ -104,7 +106,7 @@ header .divIconUtilisateur:hover{
     
 }
 #iconUtilisateur{
-    width: 90%;  
+    width: 75%;  
 }
 
 #Stivisk{
@@ -119,8 +121,7 @@ header .divIconUtilisateur:hover{
 #imageFond{
     width: 100%;
     z-index: 1;
-    border-bottom: 4px solid rgba(15, 15, 15, 0.92);
-    margin-top: -30px;
+    /* margin-top: -30px; */
     transform: scaleY(-1);
 }
 
@@ -192,27 +193,48 @@ header .divIconUtilisateur:hover{
     justify-self: center;
     flex-direction: column;
     height: 100px;
-    width: 80em;
+    width: 65%;
     background: linear-gradient(to right, white, #444444, white);
     justify-content: center;
     align-items: center;
-    h1{
-        font-weight: 800; 
-        letter-spacing: 3px;
-        font-size: 40px;
-        color: white;
-    }
+    font-weight: 800; 
+    letter-spacing: 3px;
+    font-size: 40px;
+    color: white;
+    
    
 }
 
+.divDco{
+    display:flex;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr;
+
+}
+.dcoOne{
+
+    width: 1000px;
+    background-color: rgb(255, 255, 255);
+    height: 25px;
+    /* border: 1px solid black; */
+    transform: rotate(-15deg) translateY(170px);
+    /* grid-column: ; */
+}
+.dcoTwo{
+    width: 1000px;
+    background-color: white;
+    height: 25px;
+    /* border: 1px solid black; */
+    transform: rotate(15deg) translateY(170px);
+}
 
 .itemPopulaire{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;   
-    padding: 10%;
-    margin: 8% 0% 15% 0%;
+    padding: 5% 10%;
+    margin: 4% 0% 150px 0%;
     border-radius:20PX ;
     background-color: #5656560f;
 }
@@ -331,6 +353,10 @@ header .divIconUtilisateur:hover{
     text-align: center;
 }
 
+.centrer{
+    text-align: center;
+}
+
 hr{
     margin-top: 1% ;
     margin-bottom: 0;
@@ -346,10 +372,13 @@ hr{
 }
 
 .fondGrisConnexion,.fondGrisInscripi{
+
     font-family: Inria-Serif-Bold;
+    padding-top: 90px;
+    /* margin-top: 50px; */
     font-size: large;
     letter-spacing: 3px;
-    margin: 0 0 20px;
+    margin: 0 0 25px; 
     width: 100%;
     display: flex;
     background-color: lightgrey;
@@ -1097,7 +1126,7 @@ button:hover {
 @media screen and (max-width: 900px ){
     .itemPopulaire{
    
-        margin:0 6em;
+        margin:0 5em;
       
     
     }
