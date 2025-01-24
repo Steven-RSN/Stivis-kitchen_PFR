@@ -5,30 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Connectez-vous pour ajouter et partager vos recettes préférées avec vos proches. Rejoignez notre communauté culinaire dès maintenant !">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_connexion.css">
 </head>
 <body id="connexionBody">
 
     <header>
-        <img id="iconMenuB" src="Image/icons/icons8-menu-192.png" alt="menu">
-        <img id="Stivisk" src="Image/icons/iconMarque.png" alt="logo de la marque">
+        <!-- <img id="iconMenuB" src="Image/icons/icons8-menu-192.png" alt=""> -->
+        <label for="menuLabel" id="iconMenuBg">
+            <img src="Image/icons/icons8-menu-192.png" id="iconMenuB" alt="Menu">
+        </label>
+        <input type="checkbox" id="menuLabel" class="menuLabel">
 
-        <div>
-            <a href="connexion.html">
-                <img id="iconUtilisateur" src="Image/icons/icons8-cuisinier-homme-100 (1).png" alt="icone connetion">
-            </a>
+        <div class="menuBurger">
+            <ul class="ulMenuBurger">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="">Mes favoris</a></li>
+                <li> <a href="">Ajouter une recette</a></li>
+                <li><a href="">Mon compte</a></li>
+                <li><a href="">Contact</a></li>
+           
+                
+            </ul>
         </div>
 
+        <img id="Stivisk" src="Image/icons/iconMarque.png" alt="">
+        <div class="divIconUtilisateur">
+            <a href="connexion.html">
+                <img id="iconUtilisateur" src="Image/icons/icons8-cuisinier-homme-100 (1).png" alt="">
+            </a>
+        </div>
     </header>
+  
+        <h1 class="h1">Connectez vous</h1>
 
-    <div class="fondGrisConnexion">
-        <h1>Connectez vous</h1>
-    </div>
 
     <main class="mainCenterConnexion">
 
         <div>
-            <hr>
             <p class="centrer">Pour ajouter vos recettes et les partager avec vos proches !</p>
             <hr class="petitHr">
         </div>
@@ -39,9 +52,11 @@
 
             <label for="motDePasseConnexion" class="labelConnec"><!--Mot de passe:--></label>
             <input type="password" class="inputConnec" id="motDePasseConnexion" placeholder="Mot de passe" >
+            <p class="pMotPasse">Mot de passe oublié ?</p>
 
             <input type="submit" value="Se connecter">
-            <button class="Inscrire"><a href="inscription.html">S'inscrire</a></button>
+            <p>Pas encore de compte ? <span><a href="inscription.html" class="aIns">Inscrivez-vous ici</a></span> pour accéder à toutes les fonctionnalités.</p>
+            
         </form>
 
         <div class="faceInstaGoogle">

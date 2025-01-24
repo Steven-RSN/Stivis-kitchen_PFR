@@ -18,7 +18,7 @@
         <div class="menuBurger">
             <ul class="ulMenuBurger">
 
-                <li><a href="index.html">Acceuil</a></li>
+                <li><a href="index.html">Accueil</a></li>
                 <li><a href="">Mes favoris</a></li>
                 <li> <a href="">Ajouter une recette</a></li>
                 <li><a href="">Mon compte</a></li>
@@ -34,11 +34,11 @@
             </a>
         </div>
     </header>
-    <div class="fondGrisConnexion">
+    <div class="fondGris_">
         <h1>Nouvelle recette</h1>
     </div>
 
-    <main>
+    <main class="mainAjoutR">
         <form action="" class="formAjoutRecette">
             <label for=""><!--titre--></label>
             <input type="text" placeholder="Titre de la recette" class="inputAjoutRecette">
@@ -50,23 +50,92 @@
          
                 <h2>Réalisation :</h2>
 
-                <div class="inputSelect">
-                    <div>
-                        <select name="listeDifficultée" id="uniteSelect" class="Difficulte">
+            
+            
+                <select name="listeDifficultée" id="uniteSelect" class="Difficulte">
 
-                            <option value="difficulte">Dificultée</option>
-                            <option value="expert">Expert</option>
-                            <option value="difficile">Difficile</option>
-                            <option value="moyen">Moyen</option>
-                            <option value="facile">Facile</option>
-                        </select>
-                    </div>
+                    <option value="difficulte">Dificulté</option>
+                    <option value="expert">Expert</option>
+                    <option value="difficile">Difficile</option>
+                    <option value="moyen">Moyen</option>
+                    <option value="facile">Facile</option>
+                </select>
+            
 
-                    <div>
-                        <label for="" ></label>
-                        <input type="text"class="inputRea" placeholder="Temps total">
-                    </div>
+           
+
+
+                <select name="listeDifficultée" id="uniteSelect" class="sucreSel">
+
+                    <option value="sucre">Sucré</option>
+                    <option value="sel">Salé</option>
+                   
+                </select>
+                <select name="listeDifficultée" id="uniteSelect" class="Vg">
+
+                    <option value="sel">Carnée</option>
+                    <option value="sel">Véganne</option>
+                    <option value="sel">Végétarienne</option>
+                    <option value="sel">Pesco-végétarienne</option>
+                   
+                </select>
+
+                <select name="listeOrigine" id="uniteSelect" class="origine">
+                    <option value="">Pays</option>
+                    <option value="">Autre</option>
+
+                    <optgroup label="Europe">
+                        <option value="italie">Italie</option>
+                        <option value="france">France</option>
+                        <option value="espagne">Espagne</option>
+                        <option value="allemagne">Allemagne</option>
+                        <option value="grece">Grèce</option>
+                    </optgroup>
+                
+                    <optgroup label="Amérique">
+                        <option value="etats_unis">États-Unis</option>
+                        <option value="canada">Canada</option>
+                        <option value="bresil">Brésil</option>
+                        <option value="argentine">Argentine</option>
+                        <option value="mexique">Mexique</option>
+                    </optgroup>
+                
+                    <optgroup label="Asie">
+                        <option value="chine">Chine</option>
+                        <option value="japon">Japon</option>
+                        <option value="indonesie">Indonésie</option>
+                        <option value="vietnam">Vietnam</option>
+                        <option value="inde">Inde</option>
+                    </optgroup>
+                
+                    <!-- Afrique, avec sous-catégories  -->
+                    <optgroup label="Afrique">
+                            <option value="ouest">Afrique de l'Ouest</option>
+                            <option value="est">Afrique de l'Est</option>
+                            <option value="centrale">Afrique Centrale</option>
+                            <option value="sud">Afrique du Sud</option>
+                    </optgroup>
+                
+                    <!-- Pays arabes -->
+                    <optgroup label="Moyen-Orient">
+                        <option value="algerie">Algérie</option>
+                        <option value="tunisie">Tunisie</option>
+                        <option value="maroc">Maroc</option>
+                        <option value="liban">Liban</option>
+                    </optgroup>
+                </select>
+              
+      
+                <div class="inputRea" >
+                    <label for=" ">Temps total :</label>
+                    <input type="text"class="inputRea" placeholder="25min,1h30...">
                 </div>
+                <div class="inputNbPersonne">
+                    <label for="" >Pour combien :</label>
+                    <input type="text" class="inputNbPersonne"placeholder="1,2,3,4...">
+                </div>
+
+            
 
             </div>
 
@@ -97,17 +166,24 @@
 
                     </select>
                 </div>
-                <input type="submit" value="Ajouter">
+                <input type="submit" class="btnAjout" value="Ajouter">
                 
                 
     
                         
 
+
             </fieldset>
-           
+            <fieldset class="formTextArea" >
+                <legend><h3>Les etapes</h3></legend>
             
-            <label for="" class="legende">étapes de realisation :</label>
-            <textarea name="" id="etapeDeRealisation" placeholder="Pensez a numéroter les étapes de la recette"></textarea>
+                <label for="" class="legende">(Une à la fois)</label>
+                <textarea name="" id="etapeDeRealisation" placeholder="Rentrez une etapes a la fois"></textarea>
+           
+                <input type="submit" class="btnAjout" value="Ajouter">
+                
+            </fieldset>
+            
             <h2>Ajouter des Images</h2>
 
             <form action="/upload" method="POST" enctype="multipart/form-data">
