@@ -37,6 +37,9 @@ btnSub.addEventListener('click',function(e){
         console.log('ok1')
         if(mdp.value===mdpComfirme.value){
             console.log('ok2')
+            mdp.style.borderBottom = 'solid 2px rgb(67, 115, 51)';
+            mdpComfirme.style.borderBottom = 'solid 2px rgb(67, 115, 51)';
+          
         }else{
             messageErreur()
             
@@ -56,6 +59,8 @@ const messageErreur=function(){
     P.style.border='1px solid'
     P.style.padding='32px'
     P.style.fontSize='0.8em'
+    P.style.borderRadius='2px'
+
     mdpComfirme.style.borderBottom='3px solid rgb(122, 36, 36)'
     mdp.style.borderBottom='3px solid rgb(122, 36, 36)'
 }

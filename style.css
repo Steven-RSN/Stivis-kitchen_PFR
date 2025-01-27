@@ -250,7 +250,7 @@ header .divIconUtilisateur:hover{
     padding: 2% 10%;
     margin: 4% 0% 150px 0%;
     border-radius:20PX ;
-    background-color: #55515115; 
+    background-color: #9f9f9f1f; 
     box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.1);
     border-top: 2px solid #b7b7b7a2;
     border-left: 2px solid #b7b7b7a2;
@@ -309,11 +309,14 @@ header .divIconUtilisateur:hover{
 }
 
 .img_recette{
-    border: 1px solid black;
+    border-bottom: 3px solid rgb(46, 43, 43);;
+    border-right: 3px solid rgb(46, 43, 43);;
+    border-top: 2px solid rgb(46, 43, 43);;
+    border-left: 2px solid rgb(46, 43, 43);
     background-image: url('Image/img_recette/burger.png');
     width: 100%;
     height: 100%;
-    min-width: 220px;
+    min-width: 200px;
     min-height: 180px;
     border-radius: 10px;
     display: flex;
@@ -336,12 +339,12 @@ header .divIconUtilisateur:hover{
     background-image: url('Image/alain_ducasse_img_defaut.webp');
     background-size: cover;
     background-position: center;
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
     border-radius: 50%;
     justify-self:  left;
-    margin-left: 10px;
-    margin-top: 15px;
+    margin-left: 5px;
+    margin-top: 13px;
 
 }
 
@@ -1044,6 +1047,10 @@ button:hover {
         height: 70px;
     
     }
+    .margin{
+        margin: 0;
+    }
+
     .divIconUtilisateur{    
         padding: 2px;
         border: 2px solid #CDCBBB;
@@ -1057,14 +1064,19 @@ button:hover {
 
     }
    
-    
+    .itemPopulaire{
+        padding: 0;
+        background: none;
+        border: none;
+        box-shadow: none;
+    }
     .imageRecette{
+        background-color:#ffffff00;
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 80%;
-        min-width: 260px;
-        
+        min-width: 260px;       
     
     }
     .titreRecette{
@@ -1093,6 +1105,7 @@ button:hover {
         margin-top: 1.2%;
     }
     .petiteImage{
+       
         width: 29%;
         min-width:124px;
         align-self: center;
