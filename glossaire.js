@@ -236,7 +236,7 @@ let recueil =[
     },
     {
 
-        titre:'coockies',
+        titre:'cookies',
         img:'Image/img_recette/coockies.png',
         ingredients:[
             { nom: "sel", quantité: 1, unité: "pincée" },

@@ -30,7 +30,7 @@ header{
 }
 
 .margin{
-    margin:0 16%;
+    margin:0 10%;
 }
 
 #iconMenuB{
@@ -137,24 +137,43 @@ header .divIconUtilisateur:hover{
 
 
 
-
+.gridTwo{
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+ 
+}
 
 
 
 
 .filtrer{ /* a modifier---------------------------------------*/
+    grid-row: 1;
     display: flex;
-    align-self: center;
+    flex-direction: column;
     justify-self: center;
-    width: 60%;
-    margin-bottom: 40px;
-    max-width:550px ;
+    align-items: center;
+    align-items: flex-start;   
+    height: 100%;
+    width:100% ;
+    margin: 15px 0% 150px 0%;
+    padding: 10px;
+    margin-right: 50px;
+    background-color: #fafafa; 
     border: 1px solid gray;
     border-radius: 15px;
-    justify-content: space-between;
-   
+    box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.1);
+    border-top: 3px solid #b7b7b7a2;
+    border-left: 3px solid #b7b7b7a2;
+    border-bottom:1px solid  #b7b7b7a2;
+    border-right: 1px solid #b7b7b7a2;
+ 
 }
-.btnFiltre{
+.formFiltre{
+    display: flex;
+    flex-direction: column;
+ 
+}
+/* .btnFiltre{
     background-image: url(Image/icons/inputIcon/icons8bas-100.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -165,7 +184,7 @@ header .divIconUtilisateur:hover{
     height: 20px;
     background-color: white;
     box-shadow: none;
-}
+} */
 
 .btnFiltre:hover{
     background-color:white;
@@ -206,15 +225,24 @@ header .divIconUtilisateur:hover{
 }
 
 .fondGris{
-    justify-self: center;
-    height: 54px;
-    width: 70%;
-    background: linear-gradient(to right, #ffffff, #444444,#ffffff);
-    text-align: center;
+    height: 65px;
+    width: 90%;
+    display: flex;              
+    justify-content: center;
+    align-items: center;   
+    /* background: linear-gradient(to right, #ffffff, #444444,#ffffff); */
+    background: #CDCBBB;;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+    box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.150);
+    border-left: 1px solid #383636a2;
+    border-bottom:2px solid  #383636a2;
+    border-right: 1px solid #383636a2;
     font-weight: 500; 
     letter-spacing: 3px;
-    font-size: 40px;
-    color: rgb(246, 246, 246);
+    font-size: 45px;
+    color: rgb(19, 19, 19);
+    margin-top: 0;
     
    
 }
@@ -247,15 +275,16 @@ header .divIconUtilisateur:hover{
     flex-wrap: wrap;
     align-content: center;  
     justify-content: space-evenly; 
-    padding: 2% 10%;
-    margin: 4% 0% 150px 0%;
-    border-radius:20PX ;
-    background-color: #9f9f9f1f; 
-    box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.1);
+    padding: 0% 10% 10% 10%;
+    margin: 15px 0 150px 0;
+    border-top-right-radius:20PX ;
+    border-bottom-right-radius:20PX ;
+    background-color: #fafafa; 
     border-top: 2px solid #b7b7b7a2;
-    border-left: 2px solid #b7b7b7a2;
     border-bottom:4px solid  #b7b7b7a2;
     border-right: 4px solid #b7b7b7a2;
+    box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.160);
+
 }
 
 .vigniette_recette{ 
@@ -271,8 +300,8 @@ header .divIconUtilisateur:hover{
     
 }
 .vigniette_recette:hover{ 
-    transform: scale(1.4);
-    transition: 1s;
+    transform: scale(1.05);
+    transition: 0.8s;
 }
 
 .titreRecette{
