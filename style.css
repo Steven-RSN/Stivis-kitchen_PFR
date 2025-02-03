@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+
 @font-face {
     font-family: 'Inria-Serif';
     src: url('fonts/Inria_Serif/InriaSerif-Regular.ttf') format('truetype');
@@ -11,6 +13,10 @@
     src: url('fonts/Inria_Serif/InriaSerif-Light.ttf') format('truetype');
 }
 
+
+
+  
+
 body{
     margin: 0px;
     font-family: Inria-Serif-Light;
@@ -20,29 +26,73 @@ header{
     top: 0;
     position: fixed;
     width: 100%;
-    background-color: #121212;
+    background-color: #151515;
     z-index: 3;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; /* aligne verticalement*/
-    height: 95px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 0.5fr;
+ 
+}
+.marque{
+    margin-top:  25px;
+    margin-bottom: 20px;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    font-family: "Monsieur La Doulaise", serif;
+    font-weight: 100;
+    font-size: 3em;
+    letter-spacing: 3px;
+    color: rgb(205, 203, 187);
+    border-bottom: 1px solid rgb(205, 203, 187);
 }
 
 .margin{
     margin:0 10%;
 }
+#iconUtilisateur{
+    width: 75%;
+    margin-top: 5px;  
+    
+}
+
+.menuBurger{
+    grid-column: 1/span 4;
+    grid-row: 2;
+    align-self: last baseline;
+    /* border: 1px solid white; */
+    background: rgb(38, 13, 13);
+    border-bottom: 1px solid rgb(205, 203, 187);;
+
+
+
+}
+.ulMenuBurger{
+    display: flex;
+    justify-content: space-around;
+    margin: 12px;
+    li{
+        list-style-type: none;
+        font-size: large;
+   
+        a{
+            text-decoration: none;
+            color:rgb(225, 225, 223);
+
+        }
+    }
+}
 
 #iconMenuB{
-    margin-left: 20px;
-    width: 35px;
-    z-index:2;
-    align-self: center;
-    cursor: pointer;
+    
+  display:none;
 }
 
 #iconMenuBg{
     z-index: 2;
+}
+.menuLabel{
+    display: none;
 }
 
 #iconMenuB:hover{
@@ -52,12 +102,15 @@ header{
 
 
 
-.divIconUtilisateur{    
-    padding: 4px;
-    border-radius: 40px;
-    border: 3px solid #CDCBBB;
-    width: 55px;
-    height: 55px;
+.divIconUtilisateur{   
+    grid-column: 3;
+    justify-self: flex-end; 
+    align-self: center;
+    padding: 1px;
+    border-radius: 10px;
+    border: 1px solid #CDCBBB;
+    width: 50px;
+    height: 50px;
     display: flex;
     text-align: center;
     align-items: center;
@@ -69,46 +122,6 @@ header .divIconUtilisateur:hover{
     transition: 1.5s;
 }
 
-.menuBurger{
-    top:0;
-    border-right:3px solid rgba(168, 170, 165, 0.61) ;
-    border-top:3px solid rgba(168, 170, 165, 0.61) ;
-    border-top-right-radius: 8px;
-    background-color: #1e0b0b;
-    height: 100%;
-    width: 350px;
-    position:fixed;
-    z-index: 1;
-    left: -450px;
-    transition: left 0.3s ease;
-}
-.ulMenuBurger{
-    margin-top: 45%;
-    align-self:flex-start;
-    /* margin-top: -120%; */
-    justify-items: flex-start;
-    list-style-type: circle;
-    color: aliceblue;
-
-    
-}
-.ulMenuBurger li{
-    margin-top:33%;
-    font-size: large;
-    letter-spacing: 0.3em;
-    
-}
-.ulMenuBurger li a{
-    color: aliceblue;
-    text-decoration: none;
-}
-.menuLabel:checked + .menuBurger {
-    left: 0; 
-    
-}
-#iconUtilisateur{
-    width: 75%;  
-}
 
 #Stivisk{
     border: 2px solid;
@@ -243,6 +256,7 @@ header .divIconUtilisateur:hover{
     font-size: 45px;
     color: rgb(19, 19, 19);
     margin-top: 0;
+    
     
    
 }
@@ -1039,6 +1053,72 @@ button:hover {
 }
 
 @media screen and (max-width: 900px ){
+    header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center; /* aligne verticalement*/
+        height: 95px;
+    }
+    .menuBurger{
+        top:0;
+        border-right:3px solid rgba(168, 170, 165, 0.61) ;
+        border-top:3px solid rgba(168, 170, 165, 0.61) ;
+        border-top-right-radius: 8px;
+        background-color: #1e0b0b;
+        height: 100%;
+        width: 350px;
+        position:fixed;
+        z-index: 1;
+        left: -450px;
+        transition: left 0.3s ease;
+    }
+    .ulMenuBurger{
+        margin-top: 45%;
+        align-self:flex-start;
+        /* margin-top: -120%; */
+        justify-items: flex-start;
+        list-style-type: circle;
+        color: aliceblue;
+    
+        
+    }
+    .ulMenuBurger li{
+        margin-top:33%;
+        font-size: large;
+        letter-spacing: 0.3em;
+        
+    }
+    .ulMenuBurger li a{
+        color: aliceblue;
+        text-decoration: none;
+    }
+    .menuLabel:checked + .menuBurger {
+        left: 0; 
+        
+    }
+    .menuLabel{
+        display: none;
+    }
+
+    #iconMenuB{
+        display: block;
+        margin-left: 20px;
+        width: 35px;
+        z-index:2;
+        align-self: center;
+        cursor: pointer;
+    }
+    
+    #iconMenuBg{
+        z-index: 2;
+    }
+    
+    #iconMenuB:hover{
+        transform: scale(1.1);
+        transition: 0.8s;
+    }
+   
     .itemPopulaire{
    
         margin:0 5em;
