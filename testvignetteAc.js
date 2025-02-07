@@ -196,10 +196,32 @@ if (recetteIndex !== null && !isNaN(recetteIndex)) {
 
 
 
+const header = document.getElementById('header');
+console.log(header)
+const image = document.getElementById('image');
+
+window.addEventListener('scroll', function() {
+    const imageHeight = image.clientHeight;
+
+    if (window.scrollY > 680) {
+        header.classList.add('slide');
+    } else {
+        header.classList.remove('slide');
+    }
+});
 
 
+window.addEventListener('scroll', function() {
+    const imageHeight = image.clientHeight;  // Hauteur de l'image
+    const scrollPosition = window.scrollY;
 
-
+    if (scrollPosition > imageHeight) {
+        const translateYValue = Math.min(scrollPosition - imageHeight, imageHeight); // Ne pas dépasser la hauteur de l'image
+        header.style.transform = `translateY(-${translateYValue}px)`;  // Glissement basé sur la hauteur de l'image
+    } else {
+        header.style.transform = 'translateY(0)';  // Réinitialise quand l'utilisateur est en haut
+    }
+});
 
 
 /*

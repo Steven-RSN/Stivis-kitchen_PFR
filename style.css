@@ -29,8 +29,13 @@ header{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2fr 0.5fr;
- 
+    transition: transform 0.6s ease-out;
 }
+
+.slide {
+    transform: translateY(-100%);
+}
+
 .marque{
     margin-top:  25px;
     margin-bottom: 20px;
