@@ -43,9 +43,7 @@
         </div>
             
     </form>
-    <form action="post">
-        
-    </form>
+    
   
 
 
@@ -80,13 +78,13 @@
                 <!-- Filtre par ingrédients à inclure -->
                 <label for="ingredients_inclus"><h4>Ingrédients à inclure :</h4></label>
                 <input type="text" id="ingredient_inclus" placeholder="Entrez un ingrédient">
-                <button type="button" onclick="ajouterIngredient('ingredient_inclus', 'ingredients_inclus_liste')">Ajouter</button><br>
+                <button type="button" onclick="ajouterIngredient('ingredient_inclus', 'ingredients_inclus_liste')"></button><br>
                 <ul id="ingredients_inclus_liste"></ul><br>
         
                 <!-- Filtre par ingrédients à exclure -->
                 <label for="ingredients_exclus"><h4>Ingrédients à exclure :</h4></label>
                 <input type="text" id="ingredient_exclus" placeholder="Entrez un ingrédient à exclure">
-                <button type="button" onclick="ajouterIngredientExclu('ingredient_exclus', 'ingredients_exclus_liste')">Ajouter</button><br>
+                <button type="button" id="btnEx" onclick="ajouterIngredientExclu('ingredient_exclus', 'ingredients_exclus_liste')"></button><br>
                 <ul id="ingredients_exclus_liste"></ul><br>
         
                 <!-- Filtre par temps de préparation -->
@@ -141,9 +139,10 @@
         </div>
        
         <div class="itemPopulaire">
-            <h1 class="fondGris">Populaire</h1>
+            
+            <h1 class="fondGris">Recette</h1>
             <div class="vigniette_recette" >
-                <div class="img_recette">
+                <div class="img_recette ">
                     <h6 class="titreRecette">Burger</h6>
                     <div class="temp">
                         <div class="img-utilisateur"></div>
@@ -152,11 +151,12 @@
                 </div>
                 <div class="etoils">
                     
-
-                    <!-- placer un truc ?  -->
+    
 
                 </div>
-            </div><div class="vigniette_recette" >
+            </div>
+            
+            <div class="vigniette_recette" >
                 <div class="img_recette">
                     <h6 class="titreRecette">Burger</h6>
                     <div class="temp">
@@ -187,6 +187,7 @@
 
                 </div>
             </div>
+         
             <div class="vigniette_recette" >
                 <div class="img_recette">
                     <h6 class="titreRecette">Burger</h6>
@@ -233,6 +234,8 @@
 
                 </div>
             </div>
+
+
             <div class="vigniette_recette" >
                 <div class="img_recette">
                     <h6 class="titreRecette">Burger</h6>
@@ -323,8 +326,7 @@
         </div>
         
 
-        </div>
-
+        
 
 
     <!--  \______________/___/__/__/_//\ - - - A modifier - - - /\\_\__\___\____\____________/ -->
@@ -333,12 +335,11 @@
 
 
        
-        <h1 class="fondGris">Populaire</h1>
+  
    
         
 
-        <div class="itemPopulaire">
-
+            <h1 class="fondGris fondGrisP">Populaire</h1>
             <div class="vigniette_recette" >
                 <div class="img_recette">
                     <h6 class="titreRecette">Burger</h6>
@@ -358,7 +359,7 @@
                 </div>
             </div>
 
-            <div class="vigniette_recette" >
+           <div class="vigniette_recette" >
                 <div class="img_recette">
                     <h6 class="titreRecette">Burger</h6>
                     <div class="temp">
@@ -395,7 +396,7 @@
                 </div>
             </div>
         
-            <div class="vigniette_recette" >
+           <div class="vigniette_recette" >
                 <div class="img_recette">
                     <h6 class="titreRecette">Burger</h6>
                     <div class="temp">
@@ -430,7 +431,7 @@
                     <p class="note">5/5</p>
 
                 </div>
-            </div><div class="vigniette_recette" >
+              </div><div class="vigniette_recette" >
                 <div class="img_recette">
                     <h6 class="titreRecette">Burger</h6>
                     <div class="temp">
@@ -447,7 +448,8 @@
                     <p class="note">5/5</p>
 
                 </div>
-            </div><div class="vigniette_recette" >
+           </div>
+           <div class="vigniette_recette" >
                 <div class="img_recette">
                     <h6 class="titreRecette">Burger</h6>
                     <div class="temp">
@@ -464,7 +466,8 @@
                     <p class="note">5/5</p>
 
                 </div>
-            </div><div class="vigniette_recette" >
+           </div>
+           <div class="vigniette_recette" >
                 <div class="img_recette">
                     <h6 class="titreRecette">Burger</h6>
                     <div class="temp">
@@ -481,12 +484,15 @@
                     <p class="note">5/5</p>
 
                 </div>
-        
-        
+         
+            </div>   
 
     
         </div>
     </main>
+    <footer>
+        <div class="fondGrisFooter"></div>
+    </footer>
     <script type='module' src="testvignetteAc.js"></script>
 </body>
 </html>

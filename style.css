@@ -15,8 +15,6 @@
 
 
 
-  
-
 body{
     margin: 0px;
     font-family: Inria-Serif-Light;
@@ -100,8 +98,6 @@ header{
     transition: 0.8s;
 }
 
-
-
 .divIconUtilisateur{   
     grid-column: 3;
     justify-self: flex-end; 
@@ -147,9 +143,6 @@ header .divIconUtilisateur:hover{
 
 
 
-
-
-
 .gridTwo{
     display: grid;
     grid-template-columns: 0.5fr 3fr;
@@ -160,13 +153,11 @@ header .divIconUtilisateur:hover{
 
 
 .filtrer{ /* a modifier---------------------------------------*/
-    grid-row: 1;
     display: flex;
     flex-direction: column;
     justify-self: center;
     align-items: center;
-    align-items: flex-start;   
-    height: 100%;
+    align-items: flex-start;
     width:100% ;
     margin: 15px 0% 150px 0%;
     padding: 10px;
@@ -186,6 +177,7 @@ header .divIconUtilisateur:hover{
     flex-direction: column;
  
 }
+
 /* .btnFiltre{
     background-image: url(Image/icons/inputIcon/icons8bas-100.png);
     background-size: contain;
@@ -236,30 +228,52 @@ header .divIconUtilisateur:hover{
     text-align: center;
    
 }
-
-.fondGris{
-    height: 65px;
-    width: 90%;
+.top{
+    font-family: "Monsieur La Doulaise";
+    height: 10px;
+    width: 50%;
     display: flex;              
     justify-content: center;
     align-items: center;   
     /* background: linear-gradient(to right, #ffffff, #444444,#ffffff); */
-    background: #CDCBBB;;
+    background: #eadc6f;;
     border-bottom-right-radius: 6px;
     border-bottom-left-radius: 6px;
     box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.150);
     border-left: 1px solid #383636a2;
     border-bottom:2px solid  #383636a2;
     border-right: 1px solid #383636a2;
+    
+    letter-spacing: 3px;
+    font-size: 35px;
+    color: rgb(19, 19, 19);
+    transform: translate(10px)rotate(-45deg) ;
+
+    margin: 0;
+    
+    
+}
+.fondGris{
+    height: 52px;
+    width: 79%;
+    display: flex;              
+    justify-content: center;
+    align-items: center;   
+    grid-column: 2;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    /* border-top:1px solid  #383636a2; */
+    border-bottom:2px solid  #bdbdbd;
+    border-top:2px solid  #bdbdbd;
+    border-right:7px solid #bdbdbd;
+    border-left:7px solid #bdbdbd;
     font-weight: 500; 
     letter-spacing: 3px;
-    font-size: 45px;
+    font-size: 35px;
     color: rgb(19, 19, 19);
-    margin-top: 0;
-    
-    
-   
+    margin-top: -1px;
 }
+
 /*///////////////////////////////////*/
 .divDco{
     display:flex;
@@ -298,6 +312,24 @@ header .divIconUtilisateur:hover{
     border-bottom:4px solid  #b7b7b7a2;
     border-right: 4px solid #b7b7b7a2;
     box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.160);
+
+}
+.itemAutre{
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center; 
+    justify-content: space-evenly; 
+    padding: 0% 10% 10% 10%;
+    margin: 15px 0 150px 0;
+    border-top-right-radius:20PX ;
+    border-bottom-right-radius:20PX ;
+    background-color: #fafafa; 
+    border-top: 2px solid #b7b7b7a2;
+    border-bottom:4px solid  #b7b7b7a2;
+    border-right: 4px solid #b7b7b7a2;
+    box-shadow: 6px 6px 8px  rgba(0, 0, 0, 0.160);
+
 
 }
 
@@ -395,6 +427,23 @@ header .divIconUtilisateur:hover{
     letter-spacing: 1px;
     color: white;
     margin-left: 6px;
+}
+
+.fondGrisFooter{
+    background-color: rgb(18, 17, 17);
+    width: 100%;
+    height: 30px;
+   
+}
+
+footer{
+
+    margin-top: 10%;
+    background-color: rgb(38, 13, 13);
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+
 }
 
 /* page connexion */
@@ -713,8 +762,8 @@ header .divIconUtilisateur:hover{
         justify-content: space-between;      
     }
    
-   
 }
+
 .btnAjout{
     margin: 24px 0;
     grid-column: 2;
@@ -981,22 +1030,27 @@ header .divIconUtilisateur:hover{
 }
 
 button { 
-    font-family: Inria-Serif-light;
-    font-size: large;
-    border-radius: 10px;
-    height: 35px;
-    width: 120px;
-    border: 0;
-    background-color: #CDCBBB;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.45);
-    padding: 0.5em 1em;
-    margin-top: 10px;
+    border-radius: 3px;
+    height: 20px;
+    width: 20px;
     cursor: pointer;
-    align-self: center;
+    background-image: url(Image/icons/commentaire/plus/icons8-plus-100.png);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    border-left:1px solid #a1a1a1; 
+    border-top:1px solid #a1a1a1;
+    border-right:2px solid #a1a1a1; 
+    border-bottom:2px solid #a1a1a1;
+   
+    transform: translateX(185px) translateY(-20px); 
 }
 
+
 button:hover {
-    background-color: #e0e0e0;
+    border-right:1px solid #a1a1a1; 
+    border-bottom:1px solid #a1a1a1;
 }
 .fondGrisRecetteU{
     background: linear-gradient(to right, white, #c0c0c0, white);

@@ -1,37 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+@font-face {
+    font-family: 'Inria-Serif';
+    src: url('fonts/Inria_Serif/InriaSerif-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inria-Serif-Bold';
+    src: url('fonts/Inria_Serif/InriaSerif-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Inria-Serif-Light';
+    src: url('fonts/Inria_Serif/InriaSerif-Light.ttf') format('truetype');
+}
 
 body{
     margin: 0px;
-    font-family: Inria-Serif-Light;
-    
+    font-family: Inria-Serif-Light; 
 }
 
 header{
     top: 0;
-    position: fixed;
     width: 100%;
-    background-color: #121212;
+    background-color: #151515;
     z-index: 3;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; /* aligne verticalement*/
-    height: 95px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 0.5fr; 
+}
+
+.marque{
+    margin-top:  25px;
+    margin-bottom: 20px;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    font-family: "Monsieur La Doulaise", serif;
+    font-weight: 100;
+    font-size: 3em;
+    letter-spacing: 3px;
+    color: rgb(205, 203, 187);
+    border-bottom: 1px solid rgb(205, 203, 187);
 }
 
 .margin{
-    margin:0 16%;
+    margin:0 10%;
+}
+
+#iconUtilisateur{
+    width: 75%;
+    margin-top: 5px;  
+    
+}
+
+.menuBurger{
+    grid-column: 1/span 4;
+    grid-row: 2;
+    align-self: last baseline;
+    /* border: 1px solid white; */
+    background: rgb(38, 13, 13);
+    border-bottom: 1px solid rgb(205, 203, 187);;
+}
+
+.ulMenuBurger{
+    display: flex;
+    justify-content: space-around;
+    margin: 12px;
+    li{
+        list-style-type: none;
+        font-size: large;
+        a{
+            text-decoration: none;
+            color:rgb(225, 225, 223);
+        }
+    }
 }
 
 #iconMenuB{
-    margin-left: 20px;
-    width: 35px;
-    z-index:2;
-    align-self: center;
-    cursor: pointer;
+  display:none;
 }
 
 #iconMenuBg{
     z-index: 2;
+}
+
+.menuLabel{
+    display: none;
 }
 
 #iconMenuB:hover{
@@ -39,14 +91,15 @@ header{
     transition: 0.8s;
 }
 
-
-
-.divIconUtilisateur{    
-    padding: 4px;
-    border-radius: 40px;
-    border: 3px solid #CDCBBB;
-    width: 55px;
-    height: 55px;
+.divIconUtilisateur{   
+    grid-column: 3;
+    justify-self: flex-end; 
+    align-self: center;
+    padding: 1px;
+    border-radius: 10px;
+    border: 1px solid #CDCBBB;
+    width: 50px;
+    height: 50px;
     display: flex;
     text-align: center;
     align-items: center;
@@ -58,42 +111,6 @@ header .divIconUtilisateur:hover{
     transition: 1.5s;
 }
 
-.menuBurger{
-    top:0;
-    border-right:3px solid rgba(168, 170, 165, 0.61) ;
-    border-top:3px solid rgba(168, 170, 165, 0.61) ;
-    border-top-right-radius: 8px;
-    background-color: #1e0b0b;
-    height: 100%;
-    width: 350px;
-    position:fixed;
-    z-index: 1;
-    left: -450px;
-    transition: left 0.3s ease;
-}
-.ulMenuBurger{
-    margin-top: 20%;
-    align-self:flex-start;
-    /* margin-top: -120%; */
-    justify-items: flex-start;
-    color: aliceblue;
-    
-}
-.ulMenuBurger li{
-    margin-top:35%;
-    letter-spacing: 0.3em;
-    
-}
-.ulMenuBurger li a{
-    color: aliceblue;
-}
-.menuLabel:checked + .menuBurger {
-    left: 0; 
-    
-}
-#iconUtilisateur{
-    width: 75%;  
-}
 
 #Stivisk{
     border: 2px solid;
@@ -104,18 +121,22 @@ header .divIconUtilisateur:hover{
     transform: translateX(-50%);
     width: 35%;
     max-width: 145px;
-    
 }
+
+
+
 #connexionBody{
     font-family: Inria-Serif-light;
     font-size: large;
     color: #3C3A3A;
 }
+
 h1{
-    margin-top: 180px;
+    margin-top: 60px;
     letter-spacing: 1px;
     text-align: center;
 }
+
 .mainCenterConnexion{
     justify-self: center;
     width: 60%;
@@ -128,7 +149,6 @@ h1{
     border-right: 3px solid #b7b7b7a2;;
     max-width: 760px;
     justify-items: center;
-
 }
 
 .connexionMain{
@@ -149,11 +169,9 @@ hr{
 .petitHr{
     width: 16%;
     margin-top: 0.5%;
-
 }
 
 .fondGrisConnexion{
-
     font-family: Inria-Serif-Bold;
     height: 80px;
     padding-top: 85px;
@@ -169,28 +187,26 @@ hr{
 
 .formConnection{
     font-family: Inria-Serif;
-    display: flex;
-    flex-direction: column;
     text-align: center;
     align-items: center; 
     justify-self: center;
-    width: 60%;
+    width: 50%;
     max-width: 360px;    
    /* a ------modifier------ */
 }
 .pMotPasse{
     text-decoration: underline;
-    margin-top: 0;
+    margin-top: 4px;
+    margin-right: 15px;
     font-size: smaller;
-    align-self: flex-end;
+    text-align: end;
 }
 .inputConnec{
     border: none;
     border-bottom:1px solid black;
-    margin-top: 6px;
-    margin-bottom: 2.5%;
+    margin-top: 12%;
     height: 50px;
-    width: 100%;
+    width: 85%;
     text-align: center;
     
 }
@@ -211,21 +227,26 @@ hr{
 
 
 form input[type=submit]{
+    border-radius:6px ;
+    margin: 40px 0;
+    height: 48px;
+    width: 165px;
+    display: flex;
+    justify-self: center;
     font-family: Inria-Serif-light;
-    border-radius: 8px;
     font-size: large;
-    width: 100%;
-    margin:30px 0px ;
-    height: 45px;
-    border: 0;
+    border: none;
+    border-bottom:3px solid #bab7a2;
+    border-right: 3px solid #bab7a2;
     background-color: #CDCBBB;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.45);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.551);
+    cursor: pointer;
 
 }
 
 form input[type=submit]:hover, form button:hover {
-    transform: scale(1.1);
-    transition: 0.6s;
+    border-bottom:1px solid #bab7a2;
+    border-right: 1px solid #bab7a2;
 }
 
 .labelConnec{
@@ -246,9 +267,8 @@ a{
     margin-top: 2.6%;
     display: flex;
     flex-direction: column;
-    width: 30%;
     max-width: 450px;
-    min-width: 250px;
+ 
 
     button{
         display: grid;
@@ -270,8 +290,8 @@ a{
         border-radius: 15px;
     }
     button:hover{
-        transform: scale(1.1);
-        transition: 0.8s;
+        transform: scale(1.05);
+        transition: 0.7s;
     }
     img{     
         height: 45%;
