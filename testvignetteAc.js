@@ -198,58 +198,58 @@ if (recetteIndex !== null && !isNaN(recetteIndex)) {
 
 const header = document.getElementById('header');
 console.log(header)
-const image = document.getElementById('image');
-
+const image = document.getElementById('imageFond');
+console.log(image)
+/*
 window.addEventListener('scroll', function() {
-    const imageHeight = image.clientHeight;
-
+    //const imageHeight = image.clientHeight;
+    let lastValueY = window.scrollY;
     if (window.scrollY > 680) {
         header.classList.add('slide');
-    } else {
+        console.log("coucou")
+    } else if (window.scrollY - lastValueY > 0){
         header.classList.remove('slide');
     }
+});*/
+let lastScroll = 0;
+
+
+
+window.addEventListener("scroll", function() {
+    let Scroll = window.scrollY; 
+    let scrollDifference = Scroll - lastScroll;
+    const imageHeight = image.height;
+    if (scrollDifference > 0) {
+        if (window.scrollY > imageHeight) {
+            header.classList.add('slide');
+        }
+
+    } else if (scrollDifference < 0) {
+        header.classList.remove('slide');
+        console.log("Scroll Up");
+    }
+
+    lastScroll= Scroll;
 });
 
 
-window.addEventListener('scroll', function() {
-    const imageHeight = image.clientHeight;  // Hauteur de l'image
-    const scrollPosition = window.scrollY;
-
-    if (scrollPosition > imageHeight) {
-        const translateYValue = Math.min(scrollPosition - imageHeight, imageHeight); // Ne pas dépasser la hauteur de l'image
-        header.style.transform = `translateY(-${translateYValue}px)`;  // Glissement basé sur la hauteur de l'image
-    } else {
-        header.style.transform = 'translateY(0)';  // Réinitialise quand l'utilisateur est en haut
-    }
-});
-
-
-/*
-
-//100g_farine /1_oignon/ 125cl_eau/ 60g_sucre
-let liste = [ 100 , 1 , 125 , 60 ]
-let nbPersonne=2
-
-
-let newNbPersonne = 4
-let newListe=[]
-
-    const listeIngredient=document.querySelectorAll('#ingrédientsUl li')
-
-
-
-    const tbIngredient=Array.from(listeIngredient)
-    console.log(tbIngredient)
-    for (let i=0; i<liste.length; i++){
-        newListe.push(liste[i]*(newNbPersonne/nbPersonne))    
-    }
-
-console.log(newListe)
 
 
 
 
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
