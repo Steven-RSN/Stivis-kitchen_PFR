@@ -197,28 +197,16 @@ if (recetteIndex !== null && !isNaN(recetteIndex)) {
 
 
 const header = document.getElementById('header');
-console.log(header)
 const image = document.getElementById('imageFond');
-console.log(image)
-/*
-window.addEventListener('scroll', function() {
-    //const imageHeight = image.clientHeight;
-    let lastValueY = window.scrollY;
-    if (window.scrollY > 680) {
-        header.classList.add('slide');
-        console.log("coucou")
-    } else if (window.scrollY - lastValueY > 0){
-        header.classList.remove('slide');
-    }
-});*/
-let lastScroll = 0;
 
+let lastScroll = 0;
 
 
 window.addEventListener("scroll", function() {
     let Scroll = window.scrollY; 
     let scrollDifference = Scroll - lastScroll;
     const imageHeight = image.height;
+    
     if (scrollDifference > 0) {
         if (window.scrollY > imageHeight) {
             header.classList.add('slide');
@@ -234,68 +222,66 @@ window.addEventListener("scroll", function() {
 
 
 
+// test affichage de toutes les recette
 
 
+// Sélection du bouton "Voir plus" et du conteneur des recettes
+const voirPlusBtn = document.getElementById('voirPlus'); // Bouton pour voir plus de recettes
+const recettesContainer = document.querySelector('.itemPopulaire'); // Conteneur principal où les recettes seront ajoutées
 
+voirPlusBtn.addEventListener('click', function () {
+    let nombreRecettesInitiales = document.getElementsByClassName('vigniette_recette').length;
 
+    // Boucle pour ajouter les nouvelles recettes
+    for (let i = nombreRecettesInitiales; i < recueil.length; i++) {
+        
+      
+        // Création de la div principale
+        let divRecette = document.createElement('div');
+        divRecette.classList.add('vigniette_recette');
 
+        // Création de l'image et du titre
+        let imgRecette = document.createElement('div');
+        imgRecette.classList.add('img_recette');
+        imgRecette.style.backgroundImage = `url(${recueil[i].img})`;
+        imgRecette.style.backgroundSize='cover'
 
+        let titreRecette = document.createElement('h6');
+        titreRecette.classList.add('titreRecette');
+        titreRecette.innerText = recueil[i].titre;
 
+      
+        let tempDiv = document.createElement('div');
+        tempDiv.classList.add('temp');
 
+        let imgUtilisateur = document.createElement('div');
+        imgUtilisateur.classList.add('img-utilisateur');
+        tempDiv.appendChild(imgUtilisateur);
 
+        let nomUtilisateur = document.createElement('p');
+        nomUtilisateur.classList.add('nomUtilisateur');
+        nomUtilisateur.innerText = recueil[i].utilisateur;
+        tempDiv.appendChild(nomUtilisateur);
 
+     
+        divRecette.appendChild(imgRecette);
+        imgRecette.appendChild(titreRecette);
+        imgRecette.appendChild(tempDiv);
 
+        
+        let etoilsDiv = document.createElement('div');
+        etoilsDiv.classList.add('etoils');
+        divRecette.appendChild(etoilsDiv);
 
+        // Clic pour rediriger vers la page de recette
+        divRecette.addEventListener('click', function () {
+            window.location.href = `recette.html?recette=${i}`;
+        });
 
+      
+        recettesContainer.appendChild(divRecette);
+        voirPlusBtn.innerText='Voir moins'
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-
-Pour trouver des listes d'ingrédients bien structurées comme celle que vous construisez, voici quelques sources utiles :
-
-1. Bases de données d'API pour la cuisine
-Des API fournissent des données bien structurées sur des recettes, ingrédients, quantités, et unités. Voici quelques-unes des meilleures options :
-
-a. Spoonacular API
-Fournit une vaste base de données de recettes et d'ingrédients.
-Vous pouvez rechercher des recettes, obtenir des listes d'ingrédients, des informations nutritionnelles, etc.
-Lien : Spoonacular API
-Exemple d'utilisation : Vous pouvez rechercher des recettes de "boeuf bourguignon" et obtenir la liste complète des ingrédients.
-b. TheMealDB API
-Une API gratuite contenant des recettes du monde entier.
-Les ingrédients et instructions sont organisés proprement.
-Lien : TheMealDB API
-c. Edamam Recipe API
-Fournit des recettes détaillées avec des informations nutritionnelles et des listes d'ingrédients.
-Lien : Edamam Recipe API
-d. Tasty API (non officiel)
-Certaines ressources non officielles permettent d'accéder aux recettes du site Tasty.
-Cherchez des projets open source sur GitHub ou via des API communautaires.*/          // console.log(recueil[recetteIndex].ingredients.length)
-                
+    
+});

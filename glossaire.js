@@ -617,8 +617,221 @@ let recueil =[
         statut: 'public',
         note: '',
         //com: `${bddcom}`
+    },
+    {
+        titre: 'Tacos de poisson',
+        img: 'Image/img_recette/Tacos-de-poisson.png',
+        ingredients: [
+            { nom: "filets de poisson blanc", quantité: 4, unité: null },
+            { nom: "tortillas", quantité: 4, unité: null },
+            { nom: "chou rouge", quantité: 100, unité: "g" },
+            { nom: "avocat", quantité: 1, unité: null },
+            { nom: "sauce tomate", quantité: 50, unité: "ml" },
+            { nom: "coriandre", quantité: 1, unité: "brin" }
+        ],
+        nbPersonne: 4,
+        duree: '30 min',
+        corps: [
+            'Commencez par préparer les légumes. Émincez finement le chou rouge et coupez l\'avocat en tranches.',
+            'Dans une poêle, faites chauffer un peu d\'huile et faites cuire les filets de poisson à feu moyen. Faites cuire environ 4 à 5 minutes par côté jusqu\'à ce qu\'ils soient bien dorés et cuits à cœur.',
+            'Réchauffez les tortillas dans une poêle ou au micro-ondes pendant 30 secondes.',
+            'Une fois le poisson cuit, émiettez-le à l\'aide d\'une fourchette.',
+            'Dans chaque tortilla, ajoutez une portion de poisson émietté, puis garnissez avec le chou rouge émincé, les tranches d\'avocat, et un peu de sauce tomate.',
+            'Hachez la coriandre et saupoudrez sur les tacos avant de servir.'
+        ],
+        statut: 'public',
+        note: ''
+    },
+    {
+        titre: "Soupe à l'oignon",
+        img: 'Image/img_recette/Soupe-oignon.png',
+        ingredients: [
+            { nom: "oignons", quantité: 4, unité: null },
+            { nom: "beurre", quantité: 30, unité: "g" },
+            { nom: "bouillon de volaille", quantité: 1, unité: "l" },
+            { nom: "pain", quantité: 4, unité: "tranches" },
+            { nom: "fromage râpé", quantité: 100, unité: "g" }
+        ],
+        nbPersonne: 4,
+        duree: '1h',
+        corps: [
+            'Commencez par émincer les oignons en fines lamelles.',
+            'Faites fondre le beurre dans une grande casserole à feu moyen. Ajoutez les oignons émincés et faites cuire doucement pendant 25-30 minutes, en remuant régulièrement, jusqu\'à ce qu\'ils soient bien dorés et caramélisés.',
+            'Ajoutez le bouillon de volaille dans la casserole avec les oignons caramélisés. Mélangez bien et laissez mijoter pendant 15 minutes.',
+            'Pendant ce temps, grillez les tranches de pain dans un grille-pain ou une poêle jusqu\'à ce qu\'elles soient croustillantes.',
+            'Une fois la soupe prête, versez-la dans des bols individuels, ajoutez une tranche de pain grillé dans chaque bol, puis parsemez généreusement de fromage râpé.',
+            'Placez les bols sous le gril du four pendant 5 à 10 minutes, ou jusqu\'à ce que le fromage soit fondu et légèrement doré.'
+        ],
+        statut: 'public',
+        note: ''
+    },
+    {
+        titre: 'Poulet rôti',
+        img: 'Image/img_recette/Poulet-rôti.png',
+        ingredients: [
+            { nom: "poulet entier", quantité: 1, unité: null },
+            { nom: "beurre", quantité: 50, unité: "g" },
+            { nom: "ail", quantité: 1, unité: "gousse" },
+            { nom: "romarin", quantité: 2, unité: "brins" },
+            { nom: "sel", quantité: null, unité: null },
+            { nom: "poivre", quantité: null, unité: null },
+            { nom: "pommes de terre", quantité: 4, unité: null },
+            { nom: "tomates", quantité: 4, unité: null },
+            { nom: "oignons", quantité: 2, unité: null }
+        ],
+        nbPersonne: 4,
+        duree: '1h30',
+        corps: [
+            'Préchauffez le four à 200°C.',
+            'Badigeonnez le poulet avec le beurre fondu. Assaisonnez-le généreusement avec du sel, du poivre, et insérez l\'ail et le romarin à l\'intérieur du poulet.',
+            'Pelez et coupez les pommes de terre en quartiers, puis disposez-les autour du poulet dans un grand plat allant au four.',
+            'Coupez les tomates en morceaux et ajoutez-les également autour du poulet.',
+            'Ciselez finement les oignons et répartissez-les dans le plat avec les autres légumes.',
+            'Enfournez le tout dans le four préchauffé pendant environ 1h30, en arrosant régulièrement le poulet avec son propre jus pour qu\'il soit bien doré et juteux.',
+            'Une fois le poulet cuit, servez-le avec les légumes rôtis.'
+        ],
+        statut: 'public',
+        note: ''
+    },
+    {
+        titre: 'Quiche Lorraine',
+        img: 'Image/img_recette/Quiche_Lorraine.png',
+        ingredients: [
+            { nom: "pâte brisée", quantité: 1, unité: "roulée" },
+            { nom: "lardons", quantité: 150, unité: "g" },
+            { nom: "œufs", quantité: 4, unité: null },
+            { nom: "crème fraîche", quantité: 200, unité: "ml" },
+            { nom: "lait", quantité: 100, unité: "ml" },
+            { nom: "fromage râpé", quantité: 100, unité: "g" },
+            { nom: "sel", quantité: null, unité: null },
+            { nom: "poivre", quantité: null, unité: null }
+        ],
+        nbPersonne: 6,
+        duree: '1h',
+        corps: [
+            'Préchauffez votre four à 180°C.',
+            'Étalez la pâte brisée dans un moule à tarte. Piquez-la à l\'aide d\'une fourchette pour éviter qu\'elle ne gonfle pendant la cuisson.',
+            'Faites revenir les lardons dans une poêle à feu moyen jusqu\'à ce qu\'ils soient dorés et croustillants. Égouttez-les pour retirer l\'excédent de graisse.',
+            'Dans un bol, battez les œufs, la crème fraîche et le lait. Assaisonnez avec du sel et du poivre.',
+            'Ajoutez les lardons cuits dans la préparation d\'œufs et mélangez bien.',
+            'Versez le tout sur la pâte dans le moule, puis parsemez de fromage râpé sur le dessus.',
+            'Enfournez la quiche pendant 30 à 40 minutes, ou jusqu\'à ce qu\'elle soit bien dorée et ferme au centre. Laissez refroidir légèrement avant de servir.'
+        ],
+        statut: 'public',
+        note: ''
+    },
+    {
+        titre: 'Ratatouille',
+        img: 'Image/img_recette/Ratatouille.png',
+        ingredients: [
+            { nom: "aubergine", quantité: 1, unité: null },
+            { nom: "courgettes", quantité: 2, unité: null },
+            { nom: "poivron rouge", quantité: 1, unité: null },
+            { nom: "tomates", quantité: 4, unité: null },
+            { nom: "ail", quantité: 2, unité: "gousses" },
+            { nom: "huile d\'olive", quantité: 1, unité: "filet" },
+            { nom: "herbes de Provence", quantité: 1, unité: "cuillère à café" },
+            { nom: "sel", quantité: null, unité: null },
+            { nom: "poivre", quantité: null, unité: null }
+        ],
+        nbPersonne: 4,
+        duree: '1h',
+        corps: [
+            'Coupez tous les légumes en dés égaux. Cela aidera à une cuisson uniforme.',
+            'Dans une grande poêle, faites chauffer un filet d\'huile d\'olive et ajoutez l\'ail haché finement. Faites-le revenir jusqu\'à ce qu\'il soit légèrement doré.',
+            'Ajoutez les aubergines dans la poêle et faites-les cuire pendant environ 10 minutes en remuant régulièrement.',
+            'Ajoutez ensuite les courgettes, poivrons et tomates. Saupoudrez d\'herbes de Provence et assaisonnez avec du sel et du poivre.',
+            'Laissez mijoter à feu moyen pendant 30 à 40 minutes, jusqu\'à ce que tous les légumes soient tendres et bien cuits.',
+            'Servez chaud ou à température ambiante.'
+        ],
+        statut: 'public',
+        note: ''
+    },
+    {
+        titre: 'Lasagnes',
+        img: 'Image/img_recette/Lasagne.png',
+        ingredients: [
+            { nom: "pâtes à lasagnes", quantité: 12, unité: "feuilles" },
+            { nom: "viande hachée", quantité: 500, unité: "g" },
+            { nom: "tomates pelées", quantité: 400, unité: "g" },
+            { nom: "oignons", quantité: 2, unité: null },
+            { nom: "béchamel", quantité: 500, unité: "ml" },
+            { nom: "fromage râpé", quantité: 150, unité: "g" },
+            { nom: "sel", quantité: null, unité: null },
+            { nom: "poivre", quantité: null, unité: null }
+        ],
+        nbPersonne: 6,
+        duree: '1h30',
+        corps: [
+            'Préchauffez votre four à 180°C.',
+            'Dans une poêle, faites revenir les oignons hachés dans un peu d\'huile jusqu\'à ce qu\'ils soient tendres.',
+            'Ajoutez la viande hachée et faites cuire jusqu\'à ce qu\'elle soit bien dorée.',
+            'Ajoutez les tomates pelées et assaisonnez avec du sel et du poivre. Laissez mijoter la sauce pendant 20 minutes.',
+            'Pendant ce temps, préparez la béchamel en chauffant le lait avec un peu de beurre et de farine pour épaissir.',
+            'Dans un plat à gratin, commencez par étaler une couche de sauce tomate, puis une couche de pâtes à lasagnes.',
+            'Ajoutez une couche de béchamel et de viande, puis répétez les étapes. Terminez par une couche de fromage râpé.',
+            'Enfournez pendant 45 minutes, jusqu\'à ce que les lasagnes soient bien dorées et bouillonnantes.'
+        ],
+        statut: 'public',
+        note: ''
+    },
+    {
+        titre: 'Boeuf Stroganoff',
+        img: 'Image/img_recette/Boeuf_Stroganoff.png',
+        ingredients: [
+            { nom: "bœuf (filet ou rumsteck)", quantité: 500, unité: "g" },
+            { nom: "oignons", quantité: 1, unité: null },
+            { nom: "champignons", quantité: 200, unité: "g" },
+            { nom: "crème fraîche", quantité: 200, unité: "ml" },
+            { nom: "bouillon de bœuf", quantité: 250, unité: "ml" },
+            { nom: "moutarde", quantité: 1, unité: "cuillère à soupe" },
+            { nom: "huile d'olive", quantité: 2, unité: "cuillères à soupe" },
+            { nom: "beurre", quantité: 20, unité: "g" },
+            { nom: "sel", quantité: null, unité: null },
+            { nom: "poivre", quantité: null, unité: null },
+            { nom: "paprika", quantité: 1, unité: "cuillère à café" }
+        ],
+        nbPersonne: 4,
+        duree: '40 min',
+        corps: [
+            'Coupez le bœuf en lanières ou en morceaux d\'environ 2 cm.',
+            'Dans une poêle, faites chauffer l\'huile d\'olive et faites revenir le bœuf jusqu\'à ce qu\'il soit doré sur toutes ses faces. Retirez-le de la poêle et réservez.',
+            'Dans la même poêle, faites fondre le beurre et faites revenir les oignons émincés et les champignons tranchés jusqu\'à ce qu\'ils soient tendres.',
+            'Ajoutez la moutarde, le paprika, et versez le bouillon de bœuf. Mélangez bien et laissez mijoter pendant 5 minutes.',
+            'Ajoutez ensuite la crème fraîche et mélangez pour obtenir une sauce onctueuse. Assaisonnez avec du sel et du poivre.',
+            'Réintroduisez le bœuf dans la poêle et laissez mijoter encore 5 minutes pour réchauffer la viande et bien mélanger les saveurs.',
+            'Servez chaud, accompagné de pâtes, de riz ou de purée de pommes de terre.'
+        ],
+        statut: 'public',
+        note: ''
+    },
+    {
+        titre: 'Tarte aux pommes',
+        img: 'Image/img_recette/tarte-aux-pommes.png',
+        ingredients: [
+            { nom: "pâte brisée", quantité: 1, unité: "roulée" },
+            { nom: "pommes", quantité: 6, unité: null },
+            { nom: "sucre", quantité: 100, unité: "g" },
+            { nom: "beurre", quantité: 30, unité: "g" },
+            { nom: "cannelle", quantité: 1, unité: "cuillère à café" },
+            { nom: "confiture d'abricot", quantité: 2, unité: "cuillères à soupe" }
+        ],
+        nbPersonne: 6,
+        duree: '1h',
+        corps: [
+            'Préchauffez le four à 180°C.',
+            'Étalez la pâte brisée dans un moule à tarte et piquez-la avec une fourchette.',
+            'Épluchez et coupez les pommes en tranches fines.',
+            'Disposez les tranches de pommes sur la pâte en formant une rosace, en commençant par l\'extérieur du moule et en travaillant vers le centre.',
+            'Saupoudrez les pommes avec le sucre et la cannelle.',
+            'Coupez le beurre en petits morceaux et répartissez-les sur les pommes.',
+            'Enfournez la tarte pendant 30 à 35 minutes, ou jusqu\'à ce que les pommes soient tendres et la pâte bien dorée.',
+            'Une fois la tarte cuite, faites chauffer la confiture d\'abricot dans une petite casserole, puis badigeonnez-en les pommes pour un effet brillant.',
+            'Laissez refroidir avant de servir.'
+        ],
+        statut: 'public',
+        note: ''
     }
-
 
 ];
 
