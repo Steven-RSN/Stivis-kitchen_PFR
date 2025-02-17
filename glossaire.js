@@ -37,7 +37,7 @@ let recueil =[
         img:'Image/img_recette/boulette_de_viande.png',
         ingredients: [
             { nom: "poivre", quantité: null, unité: null },
-            { nom: "fleur de sel", quantité: null, unité: null },
+            { nom: "sel", quantité: null, unité: null },
             { nom: "muscade râpée", quantité: 1, unité: "cuillère à café" },
             { nom: "oignons", quantité: 4, unité: null },
             { nom: "viande hachée", quantité: 700, unité: "g" },
@@ -48,7 +48,7 @@ let recueil =[
         nbPersonne:4,
         duree:'45 min',
         corps:[
-            `Dans un saladier, mélanger à la main, la viande, le basilique, 1 cuillère à café de fleur de sel et une grosse pincée de poivre.`,
+            `Dans un saladier, mélanger à la main, la viande, le basilique, 1 cuillère à café de fleur de sel (ou de sel) et une grosse pincée de poivre.`,
             `Former des petites boulettes, les aplatir légèrement et réserver.`,
             `Dans une poêle à bords hauts, ou une cocotte, rissoler dans l'huile d'olive ,les oignons finement hachés et ajouter les morceaux de tomates.`,
             `Cuire tout d'abord à feu vif, en remuant souvent.`,
@@ -79,7 +79,7 @@ let recueil =[
         titre:'burger',
         img:'Image/img_recette/burger.png',
         ingredients: [
-
+            { nom: "sel", quantité: 1, unité: "pincée" },
             { nom: "tomate", quantité: 3, unité: "tranches" },
             { nom: "cornichon", quantité: 1, unité: null },
             { nom: "oignon", quantité: 1, unité: null },
@@ -393,6 +393,7 @@ let recueil =[
         titre:'madeleine',
         img:'Image/img_recette/madeleine.png',
         ingredients:[
+            { nom: "sel", quantité: 1, unité: "pincée" },
             { nom: "beurre fondu", quantité: 100, unité: "g" },
             { nom: "levure chimique", quantité: 8, unité: "g" },
             { nom: "eau de fleur d'oranger", quantité: 2, unité: "cuillères à soupe" },
@@ -426,7 +427,7 @@ let recueil =[
             { nom: "fleur de sel de Guérande", quantité: 8, unité: "g" },
             { nom: "levure boulangère", quantité: 5, unité: "g" },
             { nom: "farine de bonne qualité (type 65)", quantité: 100, unité: "g" },
-            { nom: "huile d'olive extra vierge", quantité: 1, unité: "cuillère à soupe" },
+            { nom: "huile d'olive", quantité: 1, unité: "cuillère à soupe" },
             { nom: "eau minérale tiède", quantité: 9, unité: "cl" },
             // Pour la grniture  
             { nom: "mozzarella di buffala", quantité: 125, unité: "g" },
@@ -483,7 +484,7 @@ let recueil =[
         ingredients:[
             { nom: "sel", quantité: null, unité: null },      // ajuster selon goût
             { nom: "poivre", quantité: null, unité: null },   // ajuster selon goût
-            { nom: "oignon et sa verdure", quantité: 1, unité: "unité" },
+            { nom: "oignon", quantité: 1, unité: "unité" },
             { nom: "œufs", quantité: 4, unité: null },
             { nom: "épinards en branche", quantité: 250, unité: "g" },
         ],
@@ -505,6 +506,7 @@ let recueil =[
         titre:'salade_composée',
         img:'Image/img_recette/salade_compose.png',
         ingredients:[
+            { nom: "sel", quantité: 1, unité: "pincée" },
             { nom: "avocat", quantité: 1, unité: null },
             { nom: "tomates cerises", quantité: 200, unité: "g" },
             { nom: "feuilles de laitue", quantité: 1, unité: "petite laitue" },
@@ -539,6 +541,7 @@ let recueil =[
         titre:'soupe de citrouille',
         img:'Image/img_recette/soupe_de_citrouille.png',
         ingredients:[
+            { nom: "sel", quantité: 1, unité: "pincée" },
             { nom: "noix de beurre", quantité: 1, unité: "unité" },
             { nom: "citrouille", quantité: 1, unité: "kg" },
             { nom: "pommes de terre", quantité: 3, unité: null },
@@ -627,7 +630,8 @@ let recueil =[
             { nom: "chou rouge", quantité: 100, unité: "g" },
             { nom: "avocat", quantité: 1, unité: null },
             { nom: "sauce tomate", quantité: 50, unité: "ml" },
-            { nom: "coriandre", quantité: 1, unité: "brin" }
+            { nom: "coriandre", quantité: 1, unité: "brin" },
+            { nom: "sel", quantité: 1, unité: "pincée" }
         ],
         nbPersonne: 4,
         duree: '30 min',
@@ -646,6 +650,7 @@ let recueil =[
         titre: "Soupe à l'oignon",
         img: 'Image/img_recette/Soupe-oignon.png',
         ingredients: [
+            { nom: "sel", quantité: 1, unité: "pincée" },
             { nom: "oignons", quantité: 4, unité: null },
             { nom: "beurre", quantité: 30, unité: "g" },
             { nom: "bouillon de volaille", quantité: 1, unité: "l" },
