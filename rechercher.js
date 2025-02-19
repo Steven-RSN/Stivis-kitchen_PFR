@@ -8,6 +8,7 @@ import recueil from "./glossaire.js";
 const searchForm = document.querySelector('.formRechercheFiltrer');
 const barreRecherche = document.getElementById('barreRecherche');
 const itemPopulaire = document.querySelector('.itemPopulaire');
+const btnVoirPlus =document.getElementById('voirPlus')
 // Initialise les variables et récupère les élements HTML
 const titreR = document.getElementsByClassName('titreRecette');
 const titreRecetteTb = Array.from(titreR);
@@ -22,7 +23,8 @@ searchForm.addEventListener('submit', function(e) {
     const recherchePluriel = rechercheSingulier + 's';
 
     // Supprime toutes les vignettes existantes
-    itemPopulaire.innerHTML = '<h1 class="fondGris">Recettes</h1>';
+    
+    itemPopulaire.innerHTML = '<h1 class="fondGris">Recettes</h1>'; //CHANGER CA !!!!!!!!!! 
 
     let recettesTrouvees = recueil.filter(laRecette => {
         const titreLowerCase = laRecette.titre.toLowerCase();
@@ -44,6 +46,7 @@ searchForm.addEventListener('submit', function(e) {
     if (recettesTrouvees.length === 0) {
         console.log('Aucun résultat');
     } else {
+        btnVoirPlus.style.display='none'
         recettesTrouvees.forEach((recette, index) => {
             const recetteElement = document.createElement('div');
             recetteElement.className = 'vigniette_recette';
