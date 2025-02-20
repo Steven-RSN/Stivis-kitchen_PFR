@@ -228,60 +228,68 @@ window.addEventListener("scroll", function() {
 // Sélection du bouton "Voir plus" et du conteneur des recettes
 const voirPlusBtn = document.getElementById('voirPlus'); // Bouton pour voir plus de recettes
 const recettesContainer = document.querySelector('.itemPopulaire'); // Conteneur principal où les recettes seront ajoutées
+const nombreRecettesMax = 12;
 
 voirPlusBtn.addEventListener('click', function () {
     let nombreRecettesInitiales = document.getElementsByClassName('vigniette_recette').length;
 
-    // Boucle pour ajouter les nouvelles recettes
-    for (let i = nombreRecettesInitiales; i < recueil.length; i++) {
-        
-      
-        // Création de la div principale
-        let divRecette = document.createElement('div');
-        divRecette.classList.add('vigniette_recette');
+    if (voirPlusBtn.innerText === 'Voir moins') {
+ 
+        while (document.getElementsByClassName('vigniette_recette').length > nombreRecettesMax) {
+            recettesContainer.removeChild(recettesContainer.lastChild);
+        }
+        voirPlusBtn.innerText = 'Voir plus';
+    } else {
+        // Boucle pour ajouter les nouvelles recettes
+        for (let i = nombreRecettesInitiales; i < recueil.length; i++) {
+            
+            
+            // Création de la div principale
+            let divRecette = document.createElement('div');
+            divRecette.classList.add('vigniette_recette');
 
-        // Création de l'image et du titre
-        let imgRecette = document.createElement('div');
-        imgRecette.classList.add('img_recette');
-        imgRecette.style.backgroundImage = `url(${recueil[i].img})`;
-        imgRecette.style.backgroundSize='cover'
+            // Création de l'image et du titre
+            let imgRecette = document.createElement('div');
+            imgRecette.classList.add('img_recette');
+            imgRecette.style.backgroundImage = `url(${recueil[i].img})`;
+            imgRecette.style.backgroundSize='cover'
 
-        let titreRecette = document.createElement('h6');
-        titreRecette.classList.add('titreRecette');
-        titreRecette.innerText = recueil[i].titre;
+            let titreRecette = document.createElement('h6');
+            titreRecette.classList.add('titreRecette');
+            titreRecette.innerText = recueil[i].titre;
 
-      
-        let tempDiv = document.createElement('div');
-        tempDiv.classList.add('temp');
+            
+            let tempDiv = document.createElement('div');
+            tempDiv.classList.add('temp');
 
-        let imgUtilisateur = document.createElement('div');
-        imgUtilisateur.classList.add('img-utilisateur');
-        tempDiv.appendChild(imgUtilisateur);
+            let imgUtilisateur = document.createElement('div');
+            imgUtilisateur.classList.add('img-utilisateur');
+            tempDiv.appendChild(imgUtilisateur);
 
-        let nomUtilisateur = document.createElement('p');
-        nomUtilisateur.classList.add('nomUtilisateur');
-        nomUtilisateur.innerText = recueil[i].utilisateur;
-        tempDiv.appendChild(nomUtilisateur);
+            let nomUtilisateur = document.createElement('p');
+            nomUtilisateur.classList.add('nomUtilisateur');
+            nomUtilisateur.innerText = recueil[i].utilisateur;
+            tempDiv.appendChild(nomUtilisateur);
 
-     
-        divRecette.appendChild(imgRecette);
-        imgRecette.appendChild(titreRecette);
-        imgRecette.appendChild(tempDiv);
+            
+            divRecette.appendChild(imgRecette);
+            imgRecette.appendChild(titreRecette);
+            imgRecette.appendChild(tempDiv);
 
-        
-        let etoilsDiv = document.createElement('div');
-        etoilsDiv.classList.add('etoils');
-        divRecette.appendChild(etoilsDiv);
+            
+            let etoilsDiv = document.createElement('div');
+            etoilsDiv.classList.add('etoils');
+            divRecette.appendChild(etoilsDiv);
 
-        // Clic pour rediriger vers la page de recette
-        divRecette.addEventListener('click', function () {
-            window.location.href = `recette.html?recette=${i}`;
-        });
+            // Clic pour rediriger vers la page de recette
+            divRecette.addEventListener('click', function () {
+                window.location.href = `recette.html?recette=${i}`;
+            });
 
-      
-        recettesContainer.appendChild(divRecette);
-        voirPlusBtn.innerText='Voir moins'
+            
+            recettesContainer.appendChild(divRecette);
+            voirPlusBtn.innerText='Voir moins'
+        }
     }
-
     
 });
