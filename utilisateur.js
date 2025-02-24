@@ -1,100 +1,59 @@
 import recueil from "./glossaire.js";
 
+// Récupère les "paramètres" de l'URL
+let urlParams = new URLSearchParams(window.location.search);
 
-// Initialise les variables et récupère les élements HTML
-// const titreR = document.getElementsByClassName('titreRecette');
-// const titreRecetteTb = Array.from(titreR);
-// const vignetteRecette = document.getElementsByClassName('img_recette');
-// const auteur = document.getElementsByClassName('nomUtilisateur ')
-// const vignetteRecetteTb = Array.from(vignetteRecette);  //convertit en tableau
-//  console.log(auteur)
+//Récupère l'auteur
+let auteurImport = urlParams.get("auteur");
 
+console.log(auteurImport); // vérifier
+if (auteurImport) {
+    const recettesContainer = document.querySelector('.itemPopulaire');
+    const nomUtilisateur = document.querySelector('h2');
+    nomUtilisateur.textContent=auteurImport
+    // Parcourir toutes les recettes et afficher uniquement celles de l’auteur sélectionné
+    for (let i = 0; i < recueil.length; i++) {
+        if (recueil[i].auteur.trim().toLowerCase() === auteurImport.trim().toLowerCase()) { //A simplifier
+            let recette = recueil[i];
 
+            let divRecette = document.createElement('div');
+            divRecette.classList.add('vigniette_recette');
 
+            let imgRecette = document.createElement('div');
+            imgRecette.classList.add('img_recette');
+            imgRecette.style.backgroundImage = `url(${recette.img})`;
+            imgRecette.style.backgroundSize = 'cover';
 
-// Boucle pour afficher les titres et les images des recettes situées dans glossaire.js
-// for(let i =0 ; i<vignetteRecetteTb.length; i++){
-//     if(auteur[i].auteur ==='Helene Darroze'){
-//         titreRecetteTb[i].innerText=`${recueil[i].titre}`;
-//         auteur[i].innerText=`${recueil[i].auteur}`;                  
-//         vignetteRecetteTb[i].style.background=`url(${recueil[i].img})`;
-//         vignetteRecetteTb[i].style.backgroundSize=`cover`;
-//     }else{
-//         vignetteRecetteTb[i].display='none';
-//     }
-// }
+            let titreRecette = document.createElement('h6');
+            titreRecette.classList.add('titreRecette');
+            titreRecette.innerText = recette.titre;
 
-// 'Alain Ducasse'
-// 'Helene Darroze'
+            let tempDiv = document.createElement('div');
+            tempDiv.classList.add('temp');
 
-// Initialise les variables et récupère les élements HTML
-const titreR = document.getElementsByClassName('titreRecette');
-const titreRecetteTb = Array.from(titreR);
-const vignetteRecette = document.getElementsByClassName('img_recette');
-const auteurElements = document.getElementsByClassName('nomUtilisateur');
-const vignetteRecetteTb = Array.from(vignetteRecette);  //convertit en tableau
-const auteurTb = Array.from(auteurElements);
+            let imgUtilisateur = document.createElement('div');
+            imgUtilisateur.classList.add('img-utilisateur');
+            tempDiv.appendChild(imgUtilisateur);
 
-// Boucle pour afficher les titres et les images des recettes situées dans glossaire.js
-// for(let i = 0 ; i < vignetteRecetteTb.length; i++){
-//     if(recueil[i].auteur ==='Helene Darroze'){
-//         titreRecetteTb[i].innerText=`${recueil[i].titre}`;
-//         auteurElements[i].innerText=`${recueil[i].auteur}`;
-//         vignetteRecetteTb[i].style.backgroundImage=`url(${recueil[i].img})`;
-//         vignetteRecetteTb[i].style.backgroundSize=`cover`;
-//     }else{
-//         vignetteRecetteTb[i].style.display='none';
-//     }
-// }
+            let nomUtilisateur = document.createElement('p');
+            nomUtilisateur.classList.add('nomUtilisateur');
+            nomUtilisateur.innerText = recette.auteur;
+            tempDiv.appendChild(nomUtilisateur);
 
-const recettesContainer = document.querySelector('.itemPopulaire');
-for (let i = 0; i < recueil.length; i++) {
-    
-    if (recueil[i].auteur === 'Alain Ducasse') {
-        
-         // Création de la div principale
-         let divRecette = document.createElement('div');
-         divRecette.classList.add('vigniette_recette');
+            divRecette.appendChild(imgRecette);
+            imgRecette.appendChild(titreRecette);
+            imgRecette.appendChild(tempDiv);
 
-         // Création de l'image et du titre
-         let imgRecette = document.createElement('div');
-         imgRecette.classList.add('img_recette');
-         imgRecette.style.backgroundImage = `url(${recueil[i].img})`;
-         imgRecette.style.backgroundSize='cover'
+            let etoilsDiv = document.createElement('div');
+            etoilsDiv.classList.add('etoils');
+            divRecette.appendChild(etoilsDiv);
 
-         let titreRecette = document.createElement('h6');
-         titreRecette.classList.add('titreRecette');
-         titreRecette.innerText = recueil[i].titre;
+            // Clic pour rediriger vers la page de recette
+            divRecette.addEventListener('click', function () {
+                window.location.href = `recette.html?titre=${encodeURIComponent(recette.titre)}`;
+            });
 
-         
-         let tempDiv = document.createElement('div');
-         tempDiv.classList.add('temp');
-
-         let imgUtilisateur = document.createElement('div');
-         imgUtilisateur.classList.add('img-utilisateur');
-         tempDiv.appendChild(imgUtilisateur);
-
-         let nomUtilisateur = document.createElement('p');
-         nomUtilisateur.classList.add('nomUtilisateur');
-         nomUtilisateur.innerText = recueil[i].auteur ;
-         tempDiv.appendChild(nomUtilisateur);
-
-         
-         divRecette.appendChild(imgRecette);
-         imgRecette.appendChild(titreRecette);
-         imgRecette.appendChild(tempDiv);
-
-         
-         let etoilsDiv = document.createElement('div');
-         etoilsDiv.classList.add('etoils');
-         divRecette.appendChild(etoilsDiv);
-
-         // Clic pour rediriger vers la page de recette
-         divRecette.addEventListener('click', function () {
-             window.location.href = `recette.html?recette=${i}`;
-         });
-
-         
-         recettesContainer.appendChild(divRecette);
+            recettesContainer.appendChild(divRecette);
         }
+    }
 }
