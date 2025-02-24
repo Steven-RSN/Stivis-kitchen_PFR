@@ -5,9 +5,9 @@ import recueil from "./glossaire.js";
 const titreR = document.getElementsByClassName('titreRecette');
 const titreRecetteTb = Array.from(titreR);
 const vignetteRecette = document.getElementsByClassName('img_recette');
-
+const auteur = document.getElementsByClassName('nomUtilisateur ')
 const vignetteRecetteTb = Array.from(vignetteRecette);  //convertit en tableau
-
+ console.log(auteur)
 
 
 
@@ -15,7 +15,8 @@ const vignetteRecetteTb = Array.from(vignetteRecette);  //convertit en tableau
 // Boucle pour afficher les titres et les images des recettes situées dans glossaire.js
 for(let i =0 ; i<vignetteRecetteTb.length; i++){
 
-    titreRecetteTb[i].innerText=`${recueil[i].titre}`;                  
+    titreRecetteTb[i].innerText=`${recueil[i].titre}`;
+    auteur[i].innerText=`${recueil[i].auteur}`;                  
     vignetteRecetteTb[i].style.background=`url(${recueil[i].img})`;
     vignetteRecetteTb[i].style.backgroundSize=`cover`;
     
@@ -38,19 +39,22 @@ const recetteIndex = params.get('recette'); // Récupère l'index de la recette
 // Si l'index existe et si c'est bien un nombre valide, affiche la page recette correspondante
 if (recetteIndex !== null && !isNaN(recetteIndex)) {
 
-    const recette = recueil[recetteIndex]// Récupère la recette correspondante dans le tableau recueil
+    const recette = recueil[recetteIndex]; // Récupère la recette correspondante dans le tableau recueil
 
 
     // Initialise les variables pour récuperer des éléments HTML pour les modifier : titres et images (boucle pour les images)
-    const titre=document.querySelector('h1')
-    titre.innerText=recette.titre.charAt(0).toUpperCase() + recette.titre.slice(1)
-
+    const titre=document.querySelector('h1') ;
+    titre.innerText=recette.titre.charAt(0).toUpperCase() + recette.titre.slice(1);
  
     const imgGrandeRecette = document.querySelector('.grandeImage');
-    imgGrandeRecette.src= recette.img;
+    imgGrandeRecette.src = recette.img;
 
-    const imgPetiteRecette = document.querySelectorAll('.petiteImage')
-    const imgPetiteTb = Array.from(imgPetiteRecette)
+    const auteur=document.getElementById('auteur')
+    auteur.innerText =recette.auteur;
+ 
+
+    const imgPetiteRecette = document.querySelectorAll('.petiteImage');
+    const imgPetiteTb = Array.from(imgPetiteRecette);
 
     for(let img of imgPetiteTb){
         img.src= recette.img;
@@ -268,7 +272,7 @@ voirPlusBtn.addEventListener('click', function () {
 
             let nomUtilisateur = document.createElement('p');
             nomUtilisateur.classList.add('nomUtilisateur');
-            nomUtilisateur.innerText = recueil[i].utilisateur;
+            nomUtilisateur.innerText = recueil[i].auteur ;
             tempDiv.appendChild(nomUtilisateur);
 
             

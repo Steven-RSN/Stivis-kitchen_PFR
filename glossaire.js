@@ -30,6 +30,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Helene Darroze'
         //com:`${bddcom}`
     },
     {
@@ -59,6 +60,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
     },
     {
@@ -71,6 +73,7 @@ let recueil =[
         corps:'',
         statut:'',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -106,6 +109,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -140,6 +144,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -164,6 +169,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -197,6 +203,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -231,6 +238,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -264,6 +272,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -294,6 +303,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -322,6 +332,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -349,6 +360,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -385,6 +397,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -416,6 +429,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -474,6 +488,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -498,6 +513,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -533,6 +549,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -561,6 +578,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -591,6 +609,7 @@ let recueil =[
         ],
         statut:'public',
         note:'',
+        auteur:'Alain Ducasse'
         //com:`${bddcom}`
 
     },
@@ -619,6 +638,7 @@ let recueil =[
         ],
         statut: 'public',
         note: '',
+        auteur:'Alain Ducasse'
         //com: `${bddcom}`
     },
     {
@@ -644,7 +664,8 @@ let recueil =[
             'Hachez la coriandre et saupoudrez sur les tacos avant de servir.'
         ],
         statut: 'public',
-        note: ''
+        note: '',
+        auteur:'Alain Ducasse'
     },
     {
         titre: "Soupe à l'oignon",
@@ -668,7 +689,8 @@ let recueil =[
             'Placez les bols sous le gril du four pendant 5 à 10 minutes, ou jusqu\'à ce que le fromage soit fondu et légèrement doré.'
         ],
         statut: 'public',
-        note: ''
+        note: '',
+        auteur:'Alain Ducasse'
     },
     {
         titre: 'Poulet rôti',
@@ -696,7 +718,8 @@ let recueil =[
             'Une fois le poulet cuit, servez-le avec les légumes rôtis.'
         ],
         statut: 'public',
-        note: ''
+        note: '',
+        auteur:'Alain Ducasse'
     },
     {
         titre: 'Quiche Lorraine',
@@ -723,7 +746,8 @@ let recueil =[
             'Enfournez la quiche pendant 30 à 40 minutes, ou jusqu\'à ce qu\'elle soit bien dorée et ferme au centre. Laissez refroidir légèrement avant de servir.'
         ],
         statut: 'public',
-        note: ''
+        note: '',
+        auteur:'Alain Ducasse'
     },
     {
         titre: 'Ratatouille',
@@ -750,7 +774,8 @@ let recueil =[
             'Servez chaud ou à température ambiante.'
         ],
         statut: 'public',
-        note: ''
+        note: '',
+        auteur:'Alain Ducasse'
     },
     {
         titre: 'Lasagnes',
@@ -778,7 +803,8 @@ let recueil =[
             'Enfournez pendant 45 minutes, jusqu\'à ce que les lasagnes soient bien dorées et bouillonnantes.'
         ],
         statut: 'public',
-        note: ''
+        note: '',
+        auteur:'Helene Darroze'
     },
     {
         titre: 'Boeuf Stroganoff',
@@ -808,7 +834,8 @@ let recueil =[
             'Servez chaud, accompagné de pâtes, de riz ou de purée de pommes de terre.'
         ],
         statut: 'public',
-        note: ''
+        note: '',
+        auteur:'Helene Darroze'
     },
     {
         titre: 'Tarte aux pommes',
@@ -835,7 +862,8 @@ let recueil =[
             'Laissez refroidir avant de servir.'
         ],
         statut: 'public',
-        note: ''
+        note: '',
+        auteur:'Helene Darroze'
     }
 
 ];

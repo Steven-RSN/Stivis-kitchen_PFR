@@ -925,44 +925,10 @@ footer{
 /*  ////////////// --- Page Utilisateur --- \\\\\\\\\\\\\\  */ 
 
 
-
-/* .carteProfile{
-    border: 1px solid black;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    justify-self: center;
-    width: 50em;
-
-    .gris{
-        background-color: #c0c0c0;
-        text-align: center;
-        grid-column: 1/3;
-        
-        h2{
-            font-family: 'Courier New';
-          
-        }
-    }
-}
-.infoUtilisateur{
-   border: 1PX solid green;
-}
-.imgUtilisateur{
-    background-image: url('Image/alain_ducasse_img_defaut.webp');
-    background-size: cover;
-    background-position: center;
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    justify-self:  right;
-    position: relative;
-
-    
-} */
  .marge{
     margin:0 22em;
  }
-.carteProfile {
+/* .carteProfile {
     margin: 70px;
     justify-self: center;
     position: relative;
@@ -971,18 +937,17 @@ footer{
     gap: 1em;  
     width: 50em;
     text-align: left;
-}
+} */
 
-.gris {
-
+/* .gris {
     background-color: #c0c0c0;
     padding: 1em;
     text-align: center;
     border-radius: 50px 50px 0 0;
-    position: relative; /* Nécessaire pour gérer l'image qui empiète */
-}
+    position: relative; /* Nécessaire pour gérer l'image qui empiète 
+} */
 
-.gris h2 {
+/* .gris h2 {
     margin: 5px;
     padding-left: 65px;
     font-family: Inria-Serif-light;
@@ -992,17 +957,17 @@ footer{
     text-decoration: underline;
     position: relative;
 
-}
+} */
 
-.contenuUtilisateur {
+/* .contenuUtilisateur {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 1em;
     gap: 1em;
-}
+} */
 
-.imgUtilisateur {
+/* .imgUtilisateur {
     background-image: url('Image/alain_ducasse_img_defaut.webp');
     background-size: cover;
     background-position: center;
@@ -1011,12 +976,12 @@ footer{
     margin-bottom: 40px;
     border-radius: 50%;
     position: absolute; 
-    left: 5.6em; /* Place l'image à gauche */
+    left: 5.6em; 
     border: 5px solid white; 
     z-index: 2; 
-}
+} */
 
-.infoUtilisateur {
+/* .infoUtilisateur {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1098,12 +1063,12 @@ button:hover {
     box-shadow: 0px 2px 8px rgb(163, 161, 161);
 }
 .basCarte {
-    background-color: #CDCBBB; /* Couleur personnalisée pour le bas */
-    height: 25px; /* Hauteur de la bande */
-    width: 100%; /* Assure qu'elle prend toute la largeur de la carte */
-    position: relative; /* Inclus dans le flux de la carte */
+    background-color: #CDCBBB; 
+    height: 25px; 
+    width: 100%; 
+    position: relative; 
     border-radius:0 0 50px 50px;
-}
+} */
 
 @media screen and (max-width: 900px ){
     header{
