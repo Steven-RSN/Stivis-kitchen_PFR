@@ -63,19 +63,19 @@
         
                 <!-- Filtre par ingrédients à inclure -->
                 <label for="ingredients_inclus"><h4>Ingrédients à inclure :</h4></label>
-                <input type="text" id="ingredientInclus" placeholder="Entrez un ingrédient">
+                <input type="text" id="ingredientInclus" class="tailleInput" placeholder="Entrez un ingrédient">
                 <button type="button" id="btnIngreInclus"></button><br>
                 <ul id="ingredients_inclus_liste"></ul>
         
                 <!-- Filtre par ingrédients à exclure -->
                 <label for="ingredients_exclus"><h4>Ingrédients à exclure :</h4></label>
-                <input type="text" id="ingredient_exclus" placeholder="Entrez un ingrédient à exclure">
+                <input type="text" id="ingredient_exclus" class="tailleInput" placeholder="Entrez un ingrédient à exclure">
                 <button type="button" id="btnEx"></button><br>
                 <ul id="ingredients_exclus_liste"></ul>
         
                 <!-- Filtre par temps de préparation -->
                 <label for="temps"><h4>Temps de préparation :</h4></label>
-                    <select id="temps" name="temps">
+                    <select id="temps" name="temps" class="tailleInput">
                     <option value="moins_30">Moins de 30 minutes</option>
                     <option value="30_60">30 minutes à 1 heure</option>
                     <option value="plus_60">Plus d'une heure</option>
@@ -120,7 +120,7 @@
                     <label for="vegan">Vegan</label>
                 </div>
                 
-                <input type="submit" value="Filtrer les recettes">
+                <input type="submit" value="Filtrer les recettes" class="tailleInput btnSub">
             </form>
         </div>
        

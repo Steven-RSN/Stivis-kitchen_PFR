@@ -991,7 +991,7 @@ footer{
 
 .infoUtilisateur p {
     margin: 0
-}
+}*/
 
 button { 
     border-radius: 3px;
@@ -1008,7 +1008,7 @@ button {
     border-right:2px solid #a1a1a1; 
     border-bottom:2px solid #a1a1a1;
    
-    transform: translateX(185px) translateY(-20px); 
+    transform: translateX(170px) translateY(-20px); 
 }
 
 
@@ -1016,6 +1016,32 @@ button:hover {
     border-right:1px solid #a1a1a1; 
     border-bottom:1px solid #a1a1a1;
 }
+.tailleInput{
+    width: 80%;
+}
+
+.btnSub{
+    height: 25px;
+    width: 70%;
+    align-self: center;
+    margin-top: 30px;
+    border-radius: 4px;
+    border-left:2px solid #a1a1a1; 
+    border-top:2px solid #a1a1a1;
+    border-right:3px solid #a1a1a1; 
+    border-bottom:3px solid #a1a1a1
+}
+.btnSub:hover{
+    border-left:2px solid #a1a1a1; 
+    border-top:2px solid #a1a1a1;
+    border-right:2px solid #a1a1a1; 
+    border-bottom:2px solid #a1a1a1
+}
+.ingredientsInclus_exclus{
+    border: 10px solid black;
+}
+
+/*
 .fondGrisRecetteU{
     background: linear-gradient(to right, white, #c0c0c0, white);
     width:60em;

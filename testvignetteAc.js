@@ -226,7 +226,7 @@ window.addEventListener("scroll", function() {
 
 
 
-// test affichage de toutes les recette
+// test affichage de toutes les recettes
 
 
 // Sélection du bouton "Voir plus" et du conteneur des recettes

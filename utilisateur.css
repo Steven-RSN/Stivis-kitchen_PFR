@@ -63,9 +63,6 @@ header{
     /* border: 1px solid white; */
     background: rgb(38, 13, 13);
     border-bottom: 1px solid rgb(205, 203, 187);;
-
-
-
 }
 .ulMenuBurger{
     display: flex;
@@ -139,9 +136,13 @@ header .divIconUtilisateur:hover{
     gap: 1em;  
     width: 50em;
     text-align: left;
+    border-radius: 50px;
+    border-top: 2px solid #b7b7b7a2;
+    border-bottom:4px solid  #b7b7b7a2;
+    border-right: 4px solid #b7b7b7a2;
 }
 .gris {
-    background-color: #c0c0c0;
+    background-color: #CDCBBB;
     padding: 1em;
     text-align: center;
     border-radius: 50px 50px 0 0;
@@ -190,11 +191,11 @@ header .divIconUtilisateur:hover{
     background-position: center;
     height: 220px;
     width: 220px;
-    margin-bottom: 40px;
+    margin-bottom: 58px;
     border-radius: 50%;
     position: absolute; 
-    left: 5.6em; 
-    border: 5px solid white; 
+    left: 2.8em; 
+    border: 8px solid white; 
     z-index: 2; 
 }
 .titreRecette{
@@ -323,9 +324,10 @@ button:hover {
     box-shadow: 0px 2px 8px rgb(163, 161, 161);
 }
 .basCarte {
-    background-color: #CDCBBB; /* Couleur personnalisée pour le bas */
-    height: 25px; /* Hauteur de la bande */
+    background-color: #260d0de8; /* Couleur personnalisée pour le bas */
+    height: 24px; /* Hauteur de la bande */
     width: 100%; /* Assure qu'elle prend toute la largeur de la carte */
     position: relative; /* Inclus dans le flux de la carte */
     border-radius:0 0 50px 50px;
+    border-top: 3px solid #b7b7b7a2;
 }
